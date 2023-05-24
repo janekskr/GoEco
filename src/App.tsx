@@ -7,7 +7,7 @@ import Calculator from "./screens/Calculator";
 function App() {
   return (
     <BrowserRouter>
-      <div className="h-screen w-full bg-[url('/assets/background.svg')] bg-no-repeat bg-cover text-white px-14">
+      <div className="h-screen w-full bg-[url('/assets/background.svg')] bg-no-repeat bg-cover text-white px-[5vw]">
         <Navbar />
         <div className="pt-10">
           <Routes>  

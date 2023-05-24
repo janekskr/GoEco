@@ -17,3 +17,29 @@ body {
     min-height: 100vh;
 }
 
+
+form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 1px 2px 5px 4px rgba(0,0,0,0.54);
+    margin: 100px;
+    height: max-content;
+    width: 960px;
+    margin: 0 auto;
+    border-radius: 50px;
+}
+form > p{
+    color: black;
+    padding: 15px;
+    text-align: center;
+}
+input{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+}

@@ -10,7 +10,6 @@ const Calculator = () => {
   const  handleChange = (event: ChangeEvent<HTMLInputElement>) => {
 		const inputValue = event.target.value
     setInputValue(inputValue);
-
 	};
 
   const ecoTest = (value: number) =>{

@@ -7,11 +7,11 @@ interface LinkParams {
   to: string
 }
 
-const LinkComponent = (params: LinkParams) => {
+const LinkComponent = ({to, name}: LinkParams) => {
 
   return (
-    <Link href={params.to} className="block font-semibold text-xl relative border-b-[3px] border-transparent hover:border-white" >
-        {params.name}
+    <Link href={to} className="block font-semibold text-xl relative border-b-[3px] border-transparent hover:border-white" >
+        {name}
     </Link>
   )
 }

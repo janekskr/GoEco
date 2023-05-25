@@ -10,7 +10,7 @@ interface LinkParams {
 const LinkComponent = (params: LinkParams) => {
 
   return (
-    <Link href={params.to} className="block font-semibold text-xl relative border-white hover:border-b-[3px]" >
+    <Link href={params.to} className="block font-semibold text-xl relative border-b-[3px] border-transparent hover:border-white" >
         {params.name}
     </Link>
   )

@@ -12,7 +12,7 @@ const Home = () => {
           <h1 className="text-[3.75rem] font-extrabold">I zadbaj o środowisko</h1>
           <Link href="/calculator" className="bg-green-800 px-12 py-6 mt-6 block rounded-full font-semibold text-4xl hover:shadow-2xl transition">Kalkulator</Link>
         </div>
-          <Image src="/assets/earth.png" alt="earth" className="aspect-square  drop-shadow-3xl" width={350} height={350}/>
+          <Image src="/img/earth.png" alt="earth" className="aspect-square  drop-shadow-3xl" width={350} height={350}/>
       </div>
     </>
   )

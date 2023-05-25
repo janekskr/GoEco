@@ -7,6 +7,9 @@ const font = Lexend({ subsets: ['latin'] })
 export const metadata = {
   title: 'GoEco',
   description: 'GoEco to strona pozwalająca na zmierzenie swojego śladu węglowego. Ma ona uświadomić ludzi o tym jak dużym zagrożeniem jest globalne ocieplanie.',
+  icons: {
+      icon: '/favicon.png',
+  }
 }
 
 export default function RootLayout({
@@ -17,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
-        <div className="h-screen w-full bg-[url('/assets/background.svg')] bg-no-repeat bg-cover text-white px-[5vw]">
+        <div className="h-screen w-full bg-[url('/img/background.svg')] bg-no-repeat bg-cover text-white px-[5vw]">
           <Navbar />
           {children}
         </div>

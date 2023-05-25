@@ -9,7 +9,7 @@ const Navbar = () => {
     return (
         <div className="min-h-[80px] border-b-2 flex items-center justify-between px-6">
             <div>
-                <Link href="/"><Image src="/assets/logo.png" alt="Logo" height={150} width={150}/></Link>            
+                <Link href="/"><Image src="/img/logo.png" alt="Logo" height={150} width={150}/></Link>            
             </div>
             <ul className="flex items-center gap-9">
                 <li>

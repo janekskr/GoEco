@@ -1,4 +1,4 @@
-import Navbar from './components/navbar/Navbar'
+import Navbar from '../components/navbar/Navbar'
 import './globals.css'
 import { Lexend } from 'next/font/google'
 

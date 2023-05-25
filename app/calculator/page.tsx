@@ -1,6 +1,7 @@
 'use client'
 
 import {ChangeEvent, useState} from 'react';
+
 const Calculator = () => {
   const [inputValue, setInputValue] = useState('0')
   const min = 0
@@ -13,12 +14,10 @@ const Calculator = () => {
 	};
 
   const ecoTest = (value: number) =>{
-    if(value >= 50){
+    if (value >= 50) {
       return "Nie jesteś Eko"
     }
-    else{
-      return "jesteś eko"
-    }
+    return "jesteś eko"
   }
 
   return (

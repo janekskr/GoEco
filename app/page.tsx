@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
+import EarthComponent from "@/components/EarthComponent"
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
         </div>
           <Image src="/img/earth.png" alt="earth" className="aspect-square  drop-shadow-3xl" width={350} height={350}/>
       </div>
+      <EarthComponent />
     </>
   )
 }

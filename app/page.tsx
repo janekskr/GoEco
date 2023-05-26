@@ -15,7 +15,7 @@ const Home = () => {
         </div>
           <Image src="/img/earth.png" alt="earth" className="aspect-square  drop-shadow-3xl" width={350} height={350}/>
       </div>
-      <EarthComponent />
+      {/* <EarthComponent /> */}
     </>
   )
 }

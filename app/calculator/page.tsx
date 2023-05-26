@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link';
 import {ChangeEvent, useState} from 'react';
 
 const Calculator = () => {
@@ -22,19 +23,19 @@ const Calculator = () => {
   return (
     <>Calculator
       <p>Input Value: {inputValue}</p>
-      <div className='form-container'>
-        <ul className='form-nav'>
+      <div className='form-container flex w-[60vw] h-[70vh] bg-[#9dedbe] absolute top-[60%] left-[50%] rounded-[35px] shadow-2xl overflow-hidden translate-x-[-50%] translate-y-[-50%]'>
+        <ul className='bg-green-200 flex flex-col p-[35px] gap-4'>
           <li>
-            <a href="/house_CO2_prod" className='form-menu-options'>Dom</a>
+            <Link href="/calculator/home" className='text-[#36b796] block hover:opacity-[.5] transition'>Dom</Link>
           </li>
           <li>
-            <a href="/Transport_CO2_prod" className='form-menu-options'>Transport</a>
+            <Link href="/calculator/transport" className='text-[#36b796] block hover:opacity-[.5] transition'>Transport</Link>
           </li>
           <li>
-            <a href="/Entertaimen_CO2_prod" className='form-menu-options'>phones, computers, itp</a>
-          </li> 
+            <Link href="/calculator/entertainment" className='text-[#36b796] block hover:opacity-[.5] transition'>Telefony, Komputery itd...</Link>
+          </li>
         </ul>
-        <form>
+        <form className="p-[35px] flex items-center flex-col flex-1">
           <p>Ile godzin twój telewizor jest używany ? ( podaj godziny )</p>
           <input type="range" min={min} max={max} value={inputValue} onChange={handleChange}></input>
 

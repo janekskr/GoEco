@@ -16,13 +16,13 @@ export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
-}) {
+}) {  
   return (
     <html lang="en">
       <body className={font.className}>
         <div className="h-screen w-full bg-[url('/img/background.svg')] bg-no-repeat bg-cover text-white px-[5vw]">
           <Navbar />
-          {children}
+            {children}
         </div>
       </body>
     </html>

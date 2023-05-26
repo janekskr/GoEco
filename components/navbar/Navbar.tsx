@@ -7,7 +7,7 @@ import Link from "next/link"
 const Navbar = () => {
 
     return (
-        <div className="min-h-[80px] border-b-2 flex items-center justify-between px-6">
+        <div className="h-[80px] border-b-2 flex items-center justify-between px-6">
             <div>
                 <Link href="/"><Image src="/img/logo.png" alt="Logo" height={150} width={150}/></Link>            
             </div>

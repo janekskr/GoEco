@@ -21,7 +21,7 @@ const Calculator = () => {
 
   return (
     <>
-      <h1 className="text-3xl font-bold self-center">Dom</h1>
+      <h1 className="text-3xl font-bold self-center pb-[10px] border-b-[#29836d] border-b-[2px] w-full">Dom</h1>
       <p>Input Value: {inputValue}</p>
       <p>Ile godzin twój telewizor jest używany ? ( podaj godziny )</p>
       <input type="range" min={min} max={max} value={inputValue} onChange={handleChange}></input>

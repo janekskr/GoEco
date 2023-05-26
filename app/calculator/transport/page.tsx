@@ -24,7 +24,7 @@ const Calculator = () => {
 
   return (
     <>
-      <h1 className="text-3xl font-bold self-center">Transport</h1>
+      <h1 className="text-3xl font-bold self-center pb-[10px] border-b-[#29836d] border-b-[2px] w-full">Transport</h1>
       <div>
         <label htmlFor='consumption'>Jakie jest twoje średnie spalanie na 100km ?</label>
         <input value={input.input1} name="input1" type="number" className='text-[#36b796] ml-[10px] mr-[5px] p-[5px] outline-none rounded-sm' id='consumption' onChange={handleChange} /><span>Litrów</span>

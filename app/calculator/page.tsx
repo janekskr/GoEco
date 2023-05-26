@@ -21,10 +21,11 @@ const Calculator = () => {
 
   return (
     <>
+      <h1 className="text-3xl font-bold self-center">Dom</h1>
       <p>Input Value: {inputValue}</p>
       <p>Ile godzin twój telewizor jest używany ? ( podaj godziny )</p>
       <input type="range" min={min} max={max} value={inputValue} onChange={handleChange}></input>
-      <p>{ecoTest(+inputValue)}</p>
+      <p>{ecoTest(+inputValue)}</p> 
     </>
   )
 }

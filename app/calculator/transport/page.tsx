@@ -10,7 +10,7 @@ const Calculator = () => {
   }
   return (
     <>
-      <h1>Transport</h1>
+      <h1 className="text-3xl font-bold self-center">Transport</h1>
       <p>Input Value: {input}</p>
       <p>Ile ile litrów paliwa spaliłeś ?</p>
       <input value={input} name="age" type="number" className='text-[#36b796]' onChange={e => setInput(e.target.value)} />

@@ -2,24 +2,28 @@
 
 import { ChangeEvent, useState } from 'react';
 
+  // Laptop pobiera ok. 6W na 1 godzinę jeden 1kWh = 1000W * 1g (W * t) / 1000
+  // 1kWh = 657.1 g CO2 
+
 const Calculator = () => {
+
+  const min : number = 0
+
   const [input, setInput] = useState({
-    input1: '',
-    input2: ''
-  })
-  let min : number = 0
-  // Laptop pobiera 60W na 1 godzinę jeden 1kWh = 1000W * 1g (W * t) / 1000
-  // 1kWh = 758g CO2 
-  const energy = (time: number) => {
-    return (60 * time) / 1000
+    input1: '', 
+  })  
+
+  const energy = (consumption: number) => {
+    return +(consumption * 0.006).toFixed(2)
   }
 
   const co2Emission = (consumption: number) => {
-    return (756 * energy(consumption)).toFixed(2)
+    return +(energy(consumption) * 0.6571).toFixed(2)
   }
+
   function handleChange(event: ChangeEvent<HTMLInputElement>) {
       const { name, value } = event.target 
-      if(name && value)setInput((prevState) => ({ ...prevState, [name]: value }));
+      name && setInput((prevState) => ({ ...prevState, [name]: value }));
   }
 
   return (
@@ -30,9 +34,9 @@ const Calculator = () => {
         <input min={min} value={input.input1} name="input1" type="number" className='text-[#36b796] ml-[10px] mr-[5px] p-[5px] outline-none rounded-sm' id='consumption' onChange={handleChange} />
       </div>
       <p>Zużyłeś: {energy(+input.input1)} Kwh</p>
-      <p>Wyprodukowałeś: {co2Emission(+input.input1)} gramów CO2</p>
+      <p>Wyprodukowałeś: {co2Emission(+input.input1)} kilogramów CO2</p>
     </>
   )
-}
+} 
 
 export default Calculator

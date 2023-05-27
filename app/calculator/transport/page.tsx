@@ -8,18 +8,19 @@ const Calculator = () => {
     input2: ''
   })
   let min : number = 0
-  // JAK COŚ TO NA 3.785411784 litra spalonego paliwa jest  8,887 gramów CO2
+  // JAK COŚ TO 1 litr benzyny = 2.5kg CO2 
 
   const liters = (consumption: number, km: number) => {
-    return (consumption * km) / 100
+    return +(consumption * km / 100).toFixed(2)
   }
 
   const sum = (consumption: number, km: number) => {
-    return ((9 / 4) * liters(consumption, km)).toFixed(2)
+    return +(liters(consumption, km) * 2.5).toFixed(2)
   }
+
   function handleChange(event: ChangeEvent<HTMLInputElement>) {
       const { name, value } = event.target 
-      if(name && value)setInput((prevState) => ({ ...prevState, [name]: value }));
+      name && setInput((prevState) => ({ ...prevState, [name]: value }));
   }
 
   return (
@@ -34,7 +35,7 @@ const Calculator = () => {
         <input min={min} value={input.input2} name="input2" type="number" className='text-[#36b796] ml-[10px] mr-[5px] p-[5px] outline-none rounded-sm'  id='km' onChange={handleChange} /> <span> / 100km</span>
       </div>
       <p>Spaliłeś: {liters(+input.input1, +input.input2)} Litrów paliwa</p>
-      <p>Wyprodukowałeś: {sum(+input.input1, +input.input2)} gramów CO2</p>
+      <p>Wyprodukowałeś: {sum(+input.input1, +input.input2)} kilogramów CO2</p>
     </>
   )
 }

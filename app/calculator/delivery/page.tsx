@@ -18,7 +18,6 @@ const [input, setInput] = useState({
         setInput={setInput} 
         label='Długość jaką przebyła przesyłka ?'
         value={input.input1}
-        spanContent=" kilometrów"
       />
     </>  
   )

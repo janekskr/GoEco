@@ -12,14 +12,9 @@ const Calculator = () => {
     input5: '0',
   })
   const min = 0
-
-  // const ecoTest = (value: number) => {
-  //   if (value >= 50) {
-  //     return "Nie jesteś Eko"
-  //   }
-  //   return "jesteś eko"
-  // }
-
+  const co2Emission = () => {
+    return +(input.input1 * 0.6571).toFixed(2)
+  }
   return (
     <>
       <h1 className="text-3xl font-bold self-center pb-[10px] border-b-[#29836d] border-b-[2px] w-full">Dom</h1>
@@ -76,6 +71,8 @@ const Calculator = () => {
         <li>Ciepła woda:{input.input4} m3</li>
         <li>Gaz: {input.input5} kwH</li>
       </ul>
+      <p>Produkujesz {co2Emission()} kg CO2</p>
+
     </>
   )
 }

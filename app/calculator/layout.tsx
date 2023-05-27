@@ -6,6 +6,7 @@ export default function CalculatorLayout({
 }: {
     children: React.ReactNode
 }) {
+    console.log(children)
     return (
         <main className="h-[calc(100vh-80px)] flex items-center justify-center">
             <div className='flex w-[90%] h-[80%] bg-[#9dedb6] rounded-[35px] shadow-2xl overflow-hidden'>

@@ -27,19 +27,20 @@ const Calculator = () => {
         name="input1" 
         type="number" 
         setInput={setInput} 
-        label='Ile kilometrów przejechałeś ?'
+        label='Jakie jest twoje średnie spalanie na 100km ?'
         value={input.input1}
-        spanContent=" / 100km"
-      />
+        spanContent=" litrów / 100km"
+      />    
+      
       <CustomInput
         min={min} 
         name="input2" 
         type="number" 
         setInput={setInput} 
-        label='Jakie jest twoje średnie spalanie na 100km ?'
+        label='Ile kilometrów przejechałeś ?'
         value={input.input2}
-        spanContent="Litrów"
-      />    
+        spanContent=" kilometrów"
+      />
 
       <p>Spaliłeś: {liters(+input.input1, +input.input2)} Litrów paliwa</p>
       <p>Wyprodukowałeś: {sum(+input.input1, +input.input2)} kilogramów CO2</p>

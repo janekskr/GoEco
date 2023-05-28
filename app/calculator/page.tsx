@@ -12,8 +12,9 @@ const Calculator = () => {
     input5: '0',
   })
   const min = 0
-  const co2Emission = () => {
-    return +(input.input1 * 0.6571).toFixed(2)
+
+  const co2Emission = (input: number) => {
+    return +(input * 0.6571).toFixed(2)
   }
   return (
     <>
@@ -71,8 +72,7 @@ const Calculator = () => {
         <li>Ciepła woda:{input.input4} m3</li>
         <li>Gaz: {input.input5} kwH</li>
       </ul>
-      <p>Produkujesz {co2Emission()} kg CO2</p>
-      
+      <p>Produkujesz {co2Emission(+input.input1)} kg CO2</p>
     </>
   )
 }

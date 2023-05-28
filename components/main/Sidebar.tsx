@@ -1,18 +1,34 @@
 import React from 'react'
-import Link from 'next/link'
 import CustomLink from './CustomLink'
+
+const links = [
+  {
+    href: "/calculator/",
+    name: "Dom"
+  },
+  {
+    href: "/calculator/transport",
+    name: "Transport"
+  },
+  {
+    href: "/calculator/entertainment",
+    name: "Telefony, Komputery itd..."
+  },
+  {
+    href: "/calculator/delivery",
+    name: "Przesyłki"
+  },
+]
+
 const Sidebar = () => {
   return (
     <ul className='bg-green-200 flex flex-col p-[40px] gap-4'>
-      <li>
-        <CustomLink href="/calculator/" name="Kalkulator" />
-      </li>
-      <li>
-        <CustomLink href="/calculator/transport" name="Transport" />
-      </li>
-      <li>
-        <CustomLink href="/calculator/entertainment" name="Telefony, Komputery itd..." />
-      </li>
+      { links && links.map((item, index: number) => (
+        <li key={index}>
+          <CustomLink href={item.href} name={item.name} />
+        </li>  
+      )) 
+      }    
     </ul>
   )
 }

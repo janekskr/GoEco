@@ -72,7 +72,7 @@ const Calculator = () => {
         <li>Gaz: {input.input5} kwH</li>
       </ul>
       <p>Produkujesz {co2Emission()} kg CO2</p>
-
+      
     </>
   )
 }

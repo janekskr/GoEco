@@ -14,8 +14,11 @@ module.exports = {
       },
       dropShadow: {
         '3xl': '0 35px 35px rgba(0, 0, 0, 0.25)',
+      },
+      gridTemplateColumns: {
+        'responsive': 'repeat(auto-fill, minmax(450px, 1fr));'
       }
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar")],
 }

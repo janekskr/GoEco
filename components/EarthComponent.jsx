@@ -1,5 +1,3 @@
-'use client'
-
 import { Canvas } from '@react-three/fiber';
 import { PerspectiveCamera, PresentationControls, ContactShadows, useFBX } from '@react-three/drei';
 

@@ -1,17 +1,12 @@
 'use client'
 
 import CustomInput from '@/components/main/CustomInput';
-import { useState } from 'react';
+import { useContext } from 'react';
+import {CalculatorContext} from '../../context/CalculatorContext'
 
 const Calculator = () => {
-  const [input, setInput] = useState({
-    input1: '0',
-    input2: '0',
-    input3: '0',
-    input4: '0',
-    input5: '0',
-  })
   const min = 0
+  const {input, setInput} = useContext(CalculatorContext)
 
   const co2Emission = (input: number) => {
     return +(input * 0.6571).toFixed(2)
@@ -21,58 +16,58 @@ const Calculator = () => {
       <h1 className="text-3xl font-bold self-center pb-[10px] border-b-[#29836d] border-b-[2px] w-full">Dom</h1>
       <CustomInput
         min={min}
-        name="input1" 
+        name="homeInput1" 
         type="number" 
         setInput={setInput} 
         label='Ile zużywasz prądu ?'
-        value={input.input1}
+        value={input.homeInput1}
         spanContent=' kwH'
       />
       <CustomInput
         min={min}
-        name="input2" 
+        name="homeInput2" 
         type="number" 
         setInput={setInput} 
         label='Ile zużywasz węgla?'
-        value={input.input2}
+        value={input.homeInput2}
         spanContent=' kg'
       />
       <CustomInput
         min={min}
-        name="input3" 
+        name="homeInput3" 
         type="number" 
         setInput={setInput} 
         label='Ile zużywasz drewna opałowego?'
-        value={input.input3}
+        value={input.homeInput3}
         spanContent=' kg'
       />
       <CustomInput
         min={min}
-        name="input4" 
+        name="homeInput4" 
         type="number" 
         setInput={setInput} 
         label='Ile zużywasz ciepłej wody?'
-        value={input.input4}  
+        value={input.homeInput4}  
         spanContent=' m3'
       />
       <CustomInput
         min={min}
-        name="input5" 
+        name="homeInput5" 
         type="number" 
         setInput={setInput} 
         label='Ile zużywasz gazu?'
-        value={input.input5}
+        value={input.homeInput5}
         spanContent=' kwH'
       />
-      {/* <p>{ecoTest(+input.input1)}</p>  */}
+      {/* <p>{ecoTest(+input.homeInput1)}</p>  */}
       <ul>
-        <li>Prąd: {input.input1} kwH</li>
-        <li>Węgiel: {input.input2} kg</li>
-        <li>Drewno: {input.input3} kg</li>
-        <li>Ciepła woda:{input.input4} m3</li>
-        <li>Gaz: {input.input5} kwH</li>
+        <li>Prąd: {input.homeInput1} kwH</li>
+        <li>Węgiel: {input.homeInput2} kg</li>
+        <li>Drewno: {input.homeInput3} kg</li>
+        <li>Ciepła woda:{input.homeInput4} m3</li>
+        <li>Gaz: {input.homeInput5} kwH</li>
       </ul>
-      <p>Produkujesz {co2Emission(+input.input1)} kg CO2</p>
+      <p>Produkujesz {co2Emission(+input.homeInput1)} kg CO2</p>
     </>
   )
 }

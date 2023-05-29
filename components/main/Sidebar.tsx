@@ -3,21 +3,25 @@ import CustomLink from './CustomLink'
 
 const links = [
   {
-    href: "/calculator/",
+    href: "",
     name: "Dom"
   },
   {
-    href: "/calculator/transport",
+    href: "transport",
     name: "Transport"
   },
   {
-    href: "/calculator/entertainment",
+    href: "entertainment",
     name: "Telefony, Komputery itd..."
   },
   {
-    href: "/calculator/delivery",
+    href: "delivery",
     name: "Przesyłki"
   },
+  {
+    href: "summary",
+    name: "Podsumowanie"
+  }
 ]
 
 const Sidebar = () => {
@@ -25,7 +29,7 @@ const Sidebar = () => {
     <ul className='bg-green-200 flex flex-col p-[40px] gap-4'>
       { links && links.map((item, index: number) => (
         <li key={index}>
-          <CustomLink href={item.href} name={item.name} />
+          <CustomLink href={`/calculator/${item.href}`} name={item.name} />
         </li>  
       )) 
       }    

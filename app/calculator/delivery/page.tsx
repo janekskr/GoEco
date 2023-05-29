@@ -1,18 +1,16 @@
 'use client'
 
 import CustomInput from "@/components/main/CustomInput"
-import { useState } from "react"
+import { CalculatorContext } from "@/context/CalculatorContext"
+import { useContext, useState } from "react"
 
 const Delivery = () => {
-  const [input, setInput] = useState({
-    input1: "",
-    input2: "",
-  })
+  const {input, setInput} = useContext(CalculatorContext)
   const [list, setList] = useState<object[]>([])
 
   const addTask = () => {
-    if (+input.input1 && +input.input2) {
-      const task = { journey: +input.input1, weight: +input.input2 }
+    if (+input.deliveryInput1 && +input.deliveryInput2) {
+      const task = { journey: +input.deliveryInput1, weight: +input.deliveryInput2 }
       setList(prev => [...prev, task])
     }
   }
@@ -22,20 +20,20 @@ const Delivery = () => {
 
       <CustomInput
         min={0}
-        name="input1"
+        name="deliveryInput1"
         type="number"
         setInput={setInput}
         label='Długość jaką przebyła przesyłka ?'
-        value={input.input1}
+        value={input.deliveryInput1}
         spanContent=" kilometrów"
       />
       <CustomInput
         min={0}
-        name="input2"
+        name="deliveryInput2"
         type="number"
         setInput={setInput}
         label='Ile ważyła twoja przesyłka'
-        value={input.input2}
+        value={input.deliveryInput2}
         spanContent=" kilogramów"
       />
       <button onClick={addTask} className="bg-green-700 text-white rounded-lg p-[10px] hover:shadow-2xl">Dodaj Przesyłkę</button>

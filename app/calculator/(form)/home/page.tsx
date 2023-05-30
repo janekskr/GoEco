@@ -66,6 +66,11 @@ const Calculator = () => {
         <li>Gaz: {input.homeInput5} kwH</li>
       </ul>
       <p>Produkujesz {currentCO2Emision(+input.homeInput1)} kg CO2</p>
+      <div className='grid grid-cols-3 gap-4 place-items-end h-56 ...'>
+        <a href="/calculator/">BACK</a>
+        <a href="/calculator/transport">NEXT</a>
+      </div>
+
     </>
   )
 }

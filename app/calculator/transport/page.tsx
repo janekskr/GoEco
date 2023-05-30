@@ -33,6 +33,11 @@ const Calculator = () => {
 
       <p>Spaliłeś: {gasConsumption(+input.transportInput1, +input.transportInput2)} Litrów paliwa</p>
       <p>Wyprodukowałeś: {gasCO2Emmision(+input.transportInput1, +input.transportInput2)} kilogramów CO2</p>
+      <div className='grid grid-cols-3 gap-4 place-items-end h-56 ...'>
+        <a href="/calculator/">BACK</a>
+        <a href="/calculator/entertainment">NEXT</a>
+      </div>
+
     </>
   )
 }

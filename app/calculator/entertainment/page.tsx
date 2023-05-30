@@ -23,6 +23,11 @@ const Calculator = () => {
       />
       <p>Zużyłeś: {phoneEnergyConsumption(+input.entertainmentInput1)} Kwh</p>
       <p>Wyprodukowałeś: {phoneCO2Emission(+input.entertainmentInput1)} kilogramów CO2</p>
+      <div className='grid grid-cols-3 gap-4 place-items-end h-56 ...'>
+        <a href="/calculator/">BACK</a>
+        <a href="/calculator/delivery">NEXT</a>
+      </div>
+
     </>
   )
 } 

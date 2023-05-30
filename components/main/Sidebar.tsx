@@ -19,10 +19,10 @@ const links = [
     href: "delivery",
     name: "Przesyłki"
   },
-  {
-    href: "summary",
-    name: "Podsumowanie"
-  }
+  // {
+  //   href: "summary",
+  //   name: "Podsumowanie"
+  // }
 ]
 
 const Sidebar = () => {

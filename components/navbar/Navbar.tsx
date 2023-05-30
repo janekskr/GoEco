@@ -24,7 +24,7 @@ const Navbar = () => {
                     <LinkComponent  name="O Nas" to="/about"/>
                 </li>
                 <li>
-                    <LinkComponent name="Kalkulator" to="/calculator" />
+                    <LinkComponent name="Kalkulator" to="/calculator/home" />
                 </li>
             </ul>
             <RxHamburgerMenu className="block md:hidden cursor-pointer" size={40} onClick={toggleOpen} />

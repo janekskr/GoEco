@@ -19,7 +19,7 @@ const Navbar = () => {
                     <LinkComponent  name="O Nas" to="/about"/>
                 </li>
                 <li>
-                    <LinkComponent name="Kalkulator" to="/calculator" />
+                    <LinkComponent name="Kalkulator" to="/calculator/home" />
                 </li>
             </ul>
         </div>

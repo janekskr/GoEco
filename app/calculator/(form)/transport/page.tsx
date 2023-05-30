@@ -5,10 +5,9 @@ import { useContext, useEffect } from 'react';
 import { CalculatorContext } from '@/context/CalculatorContext';
 
 const Calculator = () => {
-  const {input, setInput, gasConsumption, gasCO2Emmision, setPageTitle} = useContext(CalculatorContext)
+  const {input, setInput, gasConsumption, gasCO2Emmision} = useContext(CalculatorContext)
   const min = 0
-
-  useEffect(() => setPageTitle("Transport"))
+  
   return (
     <>
       <CustomInput

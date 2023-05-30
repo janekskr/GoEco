@@ -2,7 +2,7 @@
 
 import CustomInput from '@/components/main/CustomInput';
 import { useContext } from 'react';
-import {CalculatorContext} from '../../context/CalculatorContext'
+import {CalculatorContext} from '../../../../context/CalculatorContext'
 
 const Calculator = () => {
   const min = 0

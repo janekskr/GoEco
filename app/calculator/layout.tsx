@@ -1,4 +1,3 @@
-import Sidebar from "@/components/main/Sidebar"
 import { CalculatorProvider } from "@/context/CalculatorContext"
 
 

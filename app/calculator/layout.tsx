@@ -7,7 +7,6 @@ export default function CalculatorLayout({
 }: {
     children: React.ReactNode
 }) {
-    console.log(children)
     return (
         <CalculatorProvider>
             <main className="h-[calc(100vh-80px)] flex items-center justify-center">

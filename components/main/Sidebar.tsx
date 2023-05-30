@@ -34,7 +34,10 @@ const Sidebar = () => {
           <CustomLink href={`/calculator/${item.href}`} name={item.name} selected={index == selected} />
         </li>  
       )) 
-      }    
+      }
+      <li className='mt-auto'>
+        <CustomLink href={`/calculator/summary`} name="Prześlij" selected={true} />
+      </li>
     </ul>
   )
 }

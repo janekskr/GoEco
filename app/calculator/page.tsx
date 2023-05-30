@@ -6,11 +6,9 @@ import {CalculatorContext} from '../../context/CalculatorContext'
 
 const Calculator = () => {
   const min = 0
-  const {input, setInput} = useContext(CalculatorContext)
+  const {input, setInput, currentCO2Emision} = useContext(CalculatorContext)
 
-  const co2Emission = (input: number) => {
-    return +(input * 0.6571).toFixed(2)
-  }
+
   return (
     <>
       <h1 className="text-3xl font-bold self-center pb-[10px] border-b-[#29836d] border-b-[2px] w-full">Dom</h1>
@@ -67,7 +65,7 @@ const Calculator = () => {
         <li>Ciepła woda:{input.homeInput4} m3</li>
         <li>Gaz: {input.homeInput5} kwH</li>
       </ul>
-      <p>Produkujesz {co2Emission(+input.homeInput1)} kg CO2</p>
+      <p>Produkujesz {currentCO2Emision(+input.homeInput1)} kg CO2</p>
     </>
   )
 }

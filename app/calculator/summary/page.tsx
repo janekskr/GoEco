@@ -5,31 +5,14 @@ import { useContext } from "react"
 
 const Summary = () => {
 
-    const {input} = useContext(CalculatorContext)
-    const energy = (consumption: number) => {
-      return +(consumption * 0.006).toFixed(2)
-    }
-  
-    const co2Emission = (consumption: number) => {
-      return +(energy(consumption) * 0.6571).toFixed(2)
-    }
-    const liters = (consumption: number, km: number) => {
-      return +(consumption * km / 100).toFixed(2)
-    }
-  
-    const sum = (consumption: number, km: number) => {
-      return +(liters(consumption, km) * 2.5).toFixed(2)
-    }
-    // const all = (entertaiment: number, home:number, transport:number) => {
-    //   return entertaiment + home + transport
-    // }
+    const {input, phoneCO2Emission, gasCO2Emmision, currentCO2Emision} = useContext(CalculatorContext)
 
-    let entertaiment:number = co2Emission(input.entertainmentInput1)
-    let transport:number = sum(input.transportInput1,input.transportInput2 )
-    let home:number = co2Emission(input.homeInput1)
-    let all:number = entertaiment + home + transport
-    let ecoCheck:string
-    if (all >=100){
+    const entertaiment = phoneCO2Emission(+input.entertainmentInput1)
+    const transport = gasCO2Emmision(+input.transportInput1,+input.transportInput2 )
+    const home = currentCO2Emision(+input.homeInput1)
+    const all = +(entertaiment + home + transport).toFixed(2)
+    let ecoCheck  
+    if (all >= 100){
       ecoCheck = "NIE JESTEŚ EKO FRIENDLY !"
     }
     else{

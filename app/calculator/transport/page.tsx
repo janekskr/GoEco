@@ -5,17 +5,8 @@ import { useContext } from 'react';
 import { CalculatorContext } from '@/context/CalculatorContext';
 
 const Calculator = () => {
-  const {input, setInput} = useContext(CalculatorContext)
+  const {input, setInput, gasConsumption, gasCO2Emmision} = useContext(CalculatorContext)
   const min = 0
-  // JAK COŚ TO 1 litr benzyny = 2.5kg CO2 
-
-  const liters = (consumption: number, km: number) => {
-    return +(consumption * km / 100).toFixed(2)
-  }
-
-  const sum = (consumption: number, km: number) => {
-    return +(liters(consumption, km) * 2.5).toFixed(2)
-  }
 
   return (
     <>
@@ -40,8 +31,8 @@ const Calculator = () => {
         spanContent=" kilometrów"
       />
 
-      <p>Spaliłeś: {liters(+input.transportInput1, +input.transportInput2)} Litrów paliwa</p>
-      <p>Wyprodukowałeś: {sum(+input.transportInput1, +input.transportInput2)} kilogramów CO2</p>
+      <p>Spaliłeś: {gasConsumption(+input.transportInput1, +input.transportInput2)} Litrów paliwa</p>
+      <p>Wyprodukowałeś: {gasCO2Emmision(+input.transportInput1, +input.transportInput2)} kilogramów CO2</p>
     </>
   )
 }

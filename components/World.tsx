@@ -287,7 +287,7 @@ export default function Model(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials, animations } = useGLTF('/world.gltf') as GLTFResult
   // const { actions } = useAnimations<GLTFActions>(animations, group)
   return (
-    <group ref={group} {...props} dispose={null}>
+    <group ref={group} {...props} dispose={null} scale={1.5}>
       <group name="Scene">
         <group name="ship2" position={[-0.12, 0.66, 0.74]} rotation={[1.78, 0.95, -0.5]} scale={1.47}>
           <mesh name="Plane002_1" geometry={nodes.Plane002_1.geometry} material={materials['Material.006']} />

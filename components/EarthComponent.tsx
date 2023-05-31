@@ -13,10 +13,11 @@ const EarthComponent = () => {
                 <PresentationControls
                     global
                     config={{ mass: 2, tension: 500 }}
-                    snap={{ mass: 4, tension: 1500 }}
-                    rotation={[0, 0.3, 0]}
-                    polar={[-Math.PI / 4, Math.PI / 4]}
-                    azimuth={[-Math.PI / 6, Math.PI / 6]}>
+                    // snap={{ mass: 4, tension: 1500 }} przez to planeta działa jak sprężyna
+                    rotation={[0, 0, 0]}
+                    polar={[-Math.PI, Math.PI]}
+                    azimuth={[-Math.PI, Math.PI]}
+                    >
                     <World />
                 </PresentationControls>
                 <ContactShadows position={[0, -1.4, 0]} opacity={0.35} scale={10} blur={2.5} far={4} />

@@ -14,9 +14,7 @@ const Navbar = () => {
       }, []);
     return (
         <div className="h-[80px] border-b-2 flex items-center justify-between px-[2vw] mx-[5vw]">
-            <div>
-                <Link href="/"><Image src="/img/logo.png" alt="Logo" height={150} width={150} className="w-[35vw] sm:w-auto"/></Link>            
-            </div>
+                <Link href="/" className="w-[100px] sm:w-[150px] aspect-[580/102] relative"><Image src="/img/logo.png" alt="Logo" fill className="object-cover" /></Link>            
             <NavItems className="hidden md:flex items-center gap-9"/>
             <RxHamburgerMenu className="block md:hidden cursor-pointer" size={40} onClick={toggleOpen} />
             {isOpen && 

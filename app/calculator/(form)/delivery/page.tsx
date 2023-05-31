@@ -2,6 +2,7 @@
 
 import CustomInput from "@/components/main/CustomInput"
 import { CalculatorContext } from "@/context/CalculatorContext"
+import Link from "next/link"
 import { useContext, useState } from "react"
 const Delivery = () => {
   const {input, setInput} = useContext(CalculatorContext)
@@ -54,8 +55,7 @@ const Delivery = () => {
         
       </div>
       <div className='grid grid-cols-3 gap-4 place-items-end h-56 ...'>
-        <a href="/calculator/entertaiment">BACK</a>
-        <a href="/calculator/summary">NEXT</a>
+        <Link href="/calculator/entertaiment">BACK</Link>
       </div>
 
     </>

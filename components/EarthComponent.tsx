@@ -7,7 +7,7 @@ const EarthComponent = () => {
     return (
         <div className="w-[70vh] aspect-square hidden md:block">
             <Canvas shadows dpr={[1, 2]} camera={{ position: [0, 0, 4], fov: 70 }}>
-                <PerspectiveCamera makeDefault fov={70} position={[0, 0, 5]} focusDistance={[0, 0]} />
+                <PerspectiveCamera makeDefault fov={70} position={[0, 0, 5]} />
                 <ambientLight color="#aeaeae" intensity={0.5} />
                 <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} shadow-mapSize={[512, 512]} castShadow />
                 <PresentationControls

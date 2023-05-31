@@ -2,6 +2,7 @@
 
 import CustomInput from '@/components/main/CustomInput';
 import { CalculatorContext } from '@/context/CalculatorContext';
+import Link from 'next/link';
 import { useContext } from 'react';
 
 
@@ -24,8 +25,8 @@ const Calculator = () => {
       <p>Zużyłeś: {phoneEnergyConsumption(+input.entertainmentInput1)} Kwh</p>
       <p>Wyprodukowałeś: {phoneCO2Emission(+input.entertainmentInput1)} kilogramów CO2</p>
       <div className='grid grid-cols-3 gap-4 place-items-end h-56 ...'>
-        <a href="/calculator/">BACK</a>
-        <a href="/calculator/delivery">NEXT</a>
+        <Link href="/calculator/transport">BACK</Link>
+        <Link href="/calculator/delivery">NEXT</Link>
       </div>
 
     </>

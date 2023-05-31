@@ -1,6 +1,4 @@
 import Sidebar from "@/components/main/Sidebar"
-import { CalculatorProvider } from "@/context/CalculatorContext"
-
 
 export default function CalculatorLayout({
     children,

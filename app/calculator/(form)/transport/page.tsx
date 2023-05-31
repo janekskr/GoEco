@@ -7,9 +7,10 @@ import { CalculatorContext } from '@/context/CalculatorContext';
 const Calculator = () => {
   const {input, setInput, gasConsumption, gasCO2Emmision} = useContext(CalculatorContext)
   const min = 0
-  
+
   return (
     <>
+      <h1 className="text-3xl font-bold self-center pb-[10px] border-b-[#29836d] border-b-[2px] w-full">Transport</h1>
       <CustomInput
         min={min} 
         name="transportInput1" 

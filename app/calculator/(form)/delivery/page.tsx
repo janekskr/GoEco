@@ -55,7 +55,7 @@ const Delivery = () => {
         
       </div>
       <div className='grid grid-cols-3 gap-4 place-items-end h-56 ...'>
-        <Link href="/calculator/entertaiment">BACK</Link>
+        <Link href="/calculator/entertainment">BACK</Link>
       </div>
 
     </>

@@ -8,3 +8,5 @@ W tym pliky zapisana jest produkcja CO2 przez różne czynniki:
 1 litr benzyny = 2.5kg CO2 
 Laptop zużywa 4,5 - 7 W na 1h 
 
+Przeciętny Polak produkuje 8 ton CO2 na rok (ok. 666kg na miesiąc)
+

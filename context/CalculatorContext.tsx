@@ -25,6 +25,7 @@ interface CalculatorContextProps {
   gasConsumption: (consumption: number, km: number) => number;
   gasCO2Emission: (consumption: number, km: number) => number;
   homeCO2Emission: () => number
+  all: number
 }
 
 interface CalculatorContextProviderProps {
@@ -94,6 +95,8 @@ export const CalculatorProvider = ({ children }: CalculatorContextProviderProps)
     )
   }
 
+  const all = (gasCO2Emission(+input.transportInput1,+input.transportInput2 ) + homeCO2Emission() + phoneCO2Emission(+input.entertainmentInput1))
+
   return (
     <CalculatorContext.Provider
       value={{
@@ -103,7 +106,8 @@ export const CalculatorProvider = ({ children }: CalculatorContextProviderProps)
         phoneCO2Emission,
         gasConsumption,
         gasCO2Emission,
-        homeCO2Emission
+        homeCO2Emission,
+        all
       }}
     >
       {children}

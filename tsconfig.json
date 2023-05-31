@@ -23,6 +23,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/EarthComponent.sx", "app/jaja/page.jsx", "context/CalculatorContext.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/EarthComponent.sx", "app/jaja/page.jsx", "context/CalculatorContext.js", "components/main/Sidebar.tsx"],
   "exclude": ["node_modules"]
 }

@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 const Calculator = () => {
   const min = 0
-  const {input, setInput, currentCO2Emision} = useContext(CalculatorContext)
+  const {input, setInput, homeCO2Emission} = useContext(CalculatorContext)
 
 
   return (
@@ -56,7 +56,7 @@ const Calculator = () => {
         setInput={setInput} 
         label='Ile zużywasz gazu?'
         value={input.homeInput5}
-        spanContent=' kwH'
+        spanContent='kg'
       />
       {/* <p>{ecoTest(+input.homeInput1)}</p>  */}
       <ul>
@@ -64,9 +64,9 @@ const Calculator = () => {
         <li>Węgiel: {input.homeInput2} kg</li>
         <li>Drewno: {input.homeInput3} kg</li>
         <li>Ciepła woda:{input.homeInput4} m3</li>
-        <li>Gaz: {input.homeInput5} kwH</li>
+        <li>Gaz: {input.homeInput5} kg</li>
       </ul>
-      <p>Produkujesz {currentCO2Emision(+input.homeInput1)} kg CO2</p>
+      <p>Produkujesz {homeCO2Emission()} kg CO2</p>
       <div className='grid grid-cols-3 gap-4 place-items-end h-56 ...'>
         <Link href="/calculator/transport">NEXT</Link>
       </div>

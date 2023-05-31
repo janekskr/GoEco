@@ -1,0 +1,10 @@
+W tym pliky zapisana jest produkcja CO2 przez różne czynniki:
+
+1kwH = 657,1 gramów CO2 
+1 tona węgla = 2-2,5 t, CO2
+1 tona gazu (metanu) = 2,68 tony CO2
+1 tona drzewa = 1,83 t CO2
+100l wody od temperatury kranowej (~15st. C) do 55 st. C = ~4,5kWh energii. (~2956,95g CO2)
+1 litr benzyny = 2.5kg CO2 
+Laptop zużywa 4,5 - 7 W na 1h 
+

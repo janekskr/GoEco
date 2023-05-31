@@ -5,11 +5,11 @@ import { useContext } from "react"
 
 const Summary = () => {
 
-    const {input, phoneCO2Emission, gasCO2Emmision, currentCO2Emision} = useContext(CalculatorContext)
+    const {input, phoneCO2Emission, gasCO2Emission, homeCO2Emission} = useContext(CalculatorContext)
 
     const entertaiment = phoneCO2Emission(+input.entertainmentInput1)
-    const transport = gasCO2Emmision(+input.transportInput1,+input.transportInput2 )
-    const home = currentCO2Emision(+input.homeInput1)
+    const transport = gasCO2Emission(+input.transportInput1,+input.transportInput2 )
+    const home = homeCO2Emission()
     const all = +(entertaiment + home + transport).toFixed(2)
     let ecoCheck  
     if (all >= 100){

@@ -1,5 +1,7 @@
 'use client'
 
+//Dane na temat produkcji CO2 zawarte w pliku measurements.txt
+
 import React, { createContext, useState } from "react";
 
 interface InputState {
@@ -18,11 +20,11 @@ interface InputState {
 interface CalculatorContextProps {
   input: InputState;
   setInput: React.Dispatch<React.SetStateAction<InputState>>;
-  currentCO2Emision: (input: number) => number;
   phoneEnergyConsumption: (energy: number) => number;
   phoneCO2Emission: (consumption: number) => number;
   gasConsumption: (consumption: number, km: number) => number;
-  gasCO2Emmision: (consumption: number, km: number) => number;
+  gasCO2Emission: (consumption: number, km: number) => number;
+  homeCO2Emission: () => number
 }
 
 interface CalculatorContextProviderProps {
@@ -46,7 +48,7 @@ export const CalculatorProvider = ({ children }: CalculatorContextProviderProps)
     entertainmentInput1: "",
   });
 
-  const currentCO2Emision = (input: number) => {
+  const currentCO2Emission = (input: number) => {
     return +(input * 0.6571).toFixed(2);
   };
 
@@ -58,25 +60,50 @@ export const CalculatorProvider = ({ children }: CalculatorContextProviderProps)
     return +(phoneEnergyConsumption(consumption) * 0.6571).toFixed(2);
   };
 
-  //1 litr benzyny = 2.5kg CO2 
   const gasConsumption = (consumption: number, km: number) => {
     return +(consumption * km / 100).toFixed(2)
   }
 
-  const gasCO2Emmision = (consumption: number, km: number) => {
+  const gasCO2Emission = (consumption: number, km: number) => {
     return +(gasConsumption(consumption, km) * 2.5).toFixed(2)
   }
 
+  const methanCO2Emission = (methanWeight: number) => {
+    return +(methanWeight * 2.68)
+  }
+
+  const coalCO2Emission = (coalWeight: number) => {
+    return +(coalWeight * 2.5)
+  }
+
+  const woodCO2Emission = (woodWeight: number) => {
+    return +(woodWeight * 2.5)
+  }
+
+  const waterCO2Emission = (waterCount: number) => {
+    return +(waterCount * 29.5695)
+  }
+
+  const homeCO2Emission = () => {
+    return ( 
+      currentCO2Emission(+input.homeInput1) + 
+      coalCO2Emission(+input.homeInput2) + 
+      woodCO2Emission(+input.homeInput3) + 
+      waterCO2Emission(+input.homeInput4) + 
+      methanCO2Emission(+input.homeInput5)
+    )
+  }
+
   return (
-    <CalculatorContext.Provider 
-      value={{ 
-        input, 
-        setInput, 
-        currentCO2Emision, 
-        phoneEnergyConsumption, 
-        phoneCO2Emission, 
-        gasConsumption, 
-        gasCO2Emmision 
+    <CalculatorContext.Provider
+      value={{
+        input,
+        setInput,
+        phoneEnergyConsumption,
+        phoneCO2Emission,
+        gasConsumption,
+        gasCO2Emission,
+        homeCO2Emission
       }}
     >
       {children}

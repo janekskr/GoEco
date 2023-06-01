@@ -26,7 +26,7 @@ const Sidebar = () => {
   const pathname = usePathname()
 
   return (
-    <ul className='bg-green-200 flex flex-col p-[40px] gap-4'>
+    <ul className='bg-[#bcfdbe] flex flex-col p-[40px] gap-4'>
       { links.map((item, index: number) => (
         <li key={index}>
           <CustomLink href={`/calculator/${item.href}`} name={item.name} active={pathname == `/calculator/${item.href}`} />

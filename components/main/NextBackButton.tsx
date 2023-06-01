@@ -25,19 +25,19 @@ const NextBackButton = ({ back, next }: NextBackButtonProps) => {
                     (back && next) ?
                         <>
                             <Link href={`/calculator/${back}`} className="text-sm font-semibold px-6 ">
-                                BACK
+                                Poprzednie
                             </Link>
                             <Link href={`/calculator/${next}`} className="text-sm font-semibold px-6 border-l-[1px] border-green-700 flex-1 text-center ">
-                                NEXT
+                                Następne
                             </Link>
                         </> :
                         back ?
                             <Link href={`/calculator/${back}`} className="text-sm font-semibold px-6 ">
-                                BACK
+                                Poprzednie
                             </Link> :
                             next && 
                             <Link href={`/calculator/${next}`} className="text-sm font-semibold px-6 flex-1 text-center ">
-                                NEXT
+                                Następne
                             </Link>
                 }
             </div>

@@ -1,11 +1,9 @@
 'use client'
 
-import LinkComponent from "./LinkComponent"
-import Image from "next/image"
-import Link from "next/link"
 import { useState, useCallback } from "react"
 import {RxHamburgerMenu} from 'react-icons/rx'
 import NavItems from "./NavItems"
+import Logo from "./Logo"
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState<Boolean>(false)
@@ -14,7 +12,7 @@ const Navbar = () => {
       }, []);
     return (
         <div className="h-[80px] border-b-2 flex items-center justify-between px-[2vw] mx-[5vw]">
-                <Link href="/" className="w-[100px] sm:w-[150px] aspect-[580/102] relative"><Image src="/img/logo.png" alt="Logo" fill className="object-cover" /></Link>            
+            <Logo />
             <NavItems className="hidden md:flex items-center gap-9"/>
             <RxHamburgerMenu className="block md:hidden cursor-pointer" size={40} onClick={toggleOpen} />
             {isOpen && 

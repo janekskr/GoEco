@@ -1,5 +1,4 @@
 "use client"
-import React, { useState, useEffect } from 'react'
 import CustomLink from './CustomLink'
 import {usePathname} from 'next/navigation'
 
@@ -25,9 +24,7 @@ const links = [
 const Sidebar = () => {
 
   const pathname = usePathname()
-  const [ selected, setSelected ] = useState<number>()
 
-  useEffect(() => console.log(pathname), [pathname])
   return (
     <ul className='bg-green-200 flex flex-col p-[40px] gap-4'>
       { links.map((item, index: number) => (

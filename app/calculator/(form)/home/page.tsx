@@ -13,7 +13,7 @@ const Calculator = () => {
   return (
     <>
       <div className="flex justify-between pb-[10px] border-b-[#29836d] border-b-[2px] w-full items-center">
-        <h1 className="text-3xl font-bold">Dom</h1>
+        <h1 className="text-3xl font-bold flex-1">Dom</h1>
         <NextBackButton next="transport" />
       </div>
       <CustomInput

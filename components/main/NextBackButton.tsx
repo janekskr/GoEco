@@ -1,3 +1,5 @@
+'use client'
+
 import Link from "next/link"
 
 interface NextBackButtonProps {
@@ -7,8 +9,43 @@ interface NextBackButtonProps {
 
 const NextBackButton = ({ back, next }: NextBackButtonProps) => {
     return (
-        <div className="flex items-center rounded-[20px] py-[10px] px-[15px] bg-green-600">
-            {
+        <div
+            className="
+                border-[1px]
+                py-2
+                shadow-sm
+                hover:shadow-md
+                transition
+                cursor-pointer
+                rounded-full
+                border-green-700
+            ">
+            <div className="flex items-center justify-between">
+                {
+                    (back && next) ?
+                        <>
+                            <Link href={`/calculator/${back}`} className="text-sm font-semibold px-6 ">
+                                BACK
+                            </Link>
+                            <Link href={`/calculator/${next}`} className="text-sm font-semibold px-6 border-l-[1px] border-green-700 flex-1 text-center ">
+                                NEXT
+                            </Link>
+                        </> :
+                        back ?
+                            <Link href={`/calculator/${back}`} className="text-sm font-semibold px-6 ">
+                                BACK
+                            </Link> :
+                            next && 
+                            <Link href={`/calculator/${next}`} className="text-sm font-semibold px-6 flex-1 text-center ">
+                                NEXT
+                            </Link>
+                }
+            </div>
+
+
+
+
+            {/* {
                 (back && next) ?
                     <>
                         <Link href={`/calculator/${back}`} className="border-r-[1px] pr-[10px]  border-r-white text-white">BACK</Link>
@@ -18,7 +55,7 @@ const NextBackButton = ({ back, next }: NextBackButtonProps) => {
                         <Link href={`/calculator/${back}`} className=" text-white">BACK</Link> :
                         next &&
                         <Link href={`/calculator/${next}`} className=" text-white">NEXT</Link>
-            }
+            } */}
         </div>
     )
 }

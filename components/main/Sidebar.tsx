@@ -1,6 +1,7 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import CustomLink from './CustomLink'
+import {usePathname} from 'next/navigation'
 
 const links = [
   {
@@ -18,25 +19,25 @@ const links = [
   {
     href: "delivery",
     name: "Przesyłki"
-  },
-  // {
-  //   href: "summary",
-  //   name: "Podsumowanie"
-  // }
+  }
 ]
 
 const Sidebar = () => {
+
+  const pathname = usePathname()
   const [ selected, setSelected ] = useState<number>()
+
+  useEffect(() => console.log(pathname), [pathname])
   return (
     <ul className='bg-green-200 flex flex-col p-[40px] gap-4'>
       { links.map((item, index: number) => (
-        <li key={index} onClick={() => setSelected(index)}>
-          <CustomLink href={`/calculator/${item.href}`} name={item.name} selected={index == selected} />
+        <li key={index}>
+          <CustomLink href={`/calculator/${item.href}`} name={item.name} active={pathname == `/calculator/${item.href}`} />
         </li>  
       )) 
       }
       <li className='mt-auto'>
-        <CustomLink href={`/calculator/summary`} name="Prześlij" selected={true} />
+        <CustomLink href={`/calculator/summary`} name="Prześlij" active={true} />
       </li>
     </ul>
   )

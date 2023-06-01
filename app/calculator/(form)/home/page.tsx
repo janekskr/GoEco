@@ -2,63 +2,65 @@
 
 import CustomInput from '@/components/main/CustomInput';
 import { useContext } from 'react';
-import {CalculatorContext} from '../../../../context/CalculatorContext'
-import Link from 'next/link';
+import { CalculatorContext } from '../../../../context/CalculatorContext'
+import NextBackButton from '@/components/main/NextBackButton';
 
 const Calculator = () => {
   const min = 0
-  const {input, setInput, homeCO2Emission} = useContext(CalculatorContext)
+  const { input, setInput } = useContext(CalculatorContext)
 
 
   return (
     <>
-      <h1 className="text-3xl font-bold self-center pb-[10px] border-b-[#29836d] border-b-[2px] w-full">Dom</h1>
+      <div className="flex justify-between pb-[10px] border-b-[#29836d] border-b-[2px] w-full items-center">
+        <h1 className="text-3xl font-bold">Dom</h1>
+        <NextBackButton next="transport" />
+      </div>
       <CustomInput
         min={min}
-        name="homeInput1" 
-        type="number" 
-        setInput={setInput} 
+        name="homeInput1"
+        type="number"
+        setInput={setInput}
         label='Ile zużywasz prądu ?'
         value={input.homeInput1}
         spanContent=' kwH'
       />
       <CustomInput
         min={min}
-        name="homeInput2" 
-        type="number" 
-        setInput={setInput} 
+        name="homeInput2"
+        type="number"
+        setInput={setInput}
         label='Ile zużywasz węgla?'
         value={input.homeInput2}
         spanContent=' kg'
       />
       <CustomInput
         min={min}
-        name="homeInput3" 
-        type="number" 
-        setInput={setInput} 
+        name="homeInput3"
+        type="number"
+        setInput={setInput}
         label='Ile zużywasz drewna opałowego?'
         value={input.homeInput3}
         spanContent=' kg'
       />
       <CustomInput
         min={min}
-        name="homeInput4" 
-        type="number" 
-        setInput={setInput} 
+        name="homeInput4"
+        type="number"
+        setInput={setInput}
         label='Ile zużywasz ciepłej wody?'
-        value={input.homeInput4}  
+        value={input.homeInput4}
         spanContent=' m3'
       />
       <CustomInput
         min={min}
-        name="homeInput5" 
-        type="number" 
-        setInput={setInput} 
+        name="homeInput5"
+        type="number"
+        setInput={setInput}
         label='Ile zużywasz gazu?'
         value={input.homeInput5}
         spanContent='kg'
       />
-      {/* <p>{ecoTest(+input.homeInput1)}</p>  */}
       <ul>
         <li>Prąd: {input.homeInput1} kwH</li>
         <li>Węgiel: {input.homeInput2} kg</li>
@@ -66,11 +68,6 @@ const Calculator = () => {
         <li>Ciepła woda:{input.homeInput4} m3</li>
         <li>Gaz: {input.homeInput5} kg</li>
       </ul>
-      <p>Produkujesz {homeCO2Emission()} kg CO2</p>
-      <div className='grid grid-cols-3 gap-4 place-items-end h-56 ...'>
-        <Link href="/calculator/transport">NEXT</Link>
-      </div>
-
     </>
   )
 }

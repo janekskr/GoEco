@@ -50,19 +50,19 @@ export const CalculatorProvider = ({ children }: CalculatorContextProviderProps)
   });
 
   const currentCO2Emission = (input: number) => {
-    return +(input * 0.6571).toFixed(2);
+    return input * 0.6571
   };
 
   const phoneEnergyConsumption = (energy: number) => {
-    return +(energy * 0.006).toFixed(2);
+    return energy * 0.006
   };
 
   const phoneCO2Emission = (consumption: number) => {
-    return +(phoneEnergyConsumption(consumption) * 0.6571).toFixed(2);
+    return +(phoneEnergyConsumption(consumption) * 0.6571).toFixed(2)
   };
 
   const gasConsumption = (consumption: number, km: number) => {
-    return +(consumption * km / 100).toFixed(2)
+    return consumption * km / 100
   }
 
   const gasCO2Emission = (consumption: number, km: number) => {
@@ -70,32 +70,32 @@ export const CalculatorProvider = ({ children }: CalculatorContextProviderProps)
   }
 
   const methanCO2Emission = (methanWeight: number) => {
-    return +(methanWeight * 2.68)
+    return methanWeight * 2.68
   }
 
   const coalCO2Emission = (coalWeight: number) => {
-    return +(coalWeight * 2.5)
+    return coalWeight * 2.5
   }
 
   const woodCO2Emission = (woodWeight: number) => {
-    return +(woodWeight * 2.5)
+    return woodWeight * 2.5
   }
 
   const waterCO2Emission = (waterCount: number) => {
-    return +(waterCount * 29.5695)
+    return waterCount * 29.5695
   }
 
   const homeCO2Emission = () => {
-    return ( 
+    return +( 
       currentCO2Emission(+input.homeInput1) + 
       coalCO2Emission(+input.homeInput2) + 
       woodCO2Emission(+input.homeInput3) + 
       waterCO2Emission(+input.homeInput4) + 
       methanCO2Emission(+input.homeInput5)
-    )
+    ).toFixed(2)
   }
 
-  const all = (gasCO2Emission(+input.transportInput1,+input.transportInput2 ) + homeCO2Emission() + phoneCO2Emission(+input.entertainmentInput1))
+  const all = +(gasCO2Emission(+input.transportInput1,+input.transportInput2 ) + homeCO2Emission() + phoneCO2Emission(+input.entertainmentInput1)).toFixed(2)
 
   return (
     <CalculatorContext.Provider

@@ -3,15 +3,18 @@
 import CustomInput from '@/components/main/CustomInput';
 import { useContext } from 'react';
 import { CalculatorContext } from '@/context/CalculatorContext';
-import Link from 'next/link';
+import NextBackButton from '@/components/main/NextBackButton';
 
 const Calculator = () => {
-  const {input, setInput, gasConsumption, gasCO2Emission} = useContext(CalculatorContext)
+  const {input, setInput, gasConsumption} = useContext(CalculatorContext)
   const min = 0
 
   return (
     <>
-      <h1 className="text-3xl font-bold self-center pb-[10px] border-b-[#29836d] border-b-[2px] w-full">Transport</h1>
+      <div className="flex justify-between pb-[10px] border-b-[#29836d] border-b-[2px] w-full items-center">
+      <h1 className="text-3xl font-bold">Transport</h1>
+      <NextBackButton back="home" next="entertainment" />
+    </div>
       <CustomInput
         min={min} 
         name="transportInput1" 
@@ -33,12 +36,6 @@ const Calculator = () => {
       />
 
       <p>Spaliłeś: {gasConsumption(+input.transportInput1, +input.transportInput2)} Litrów paliwa</p>
-      <p>Wyprodukowałeś: {gasCO2Emission(+input.transportInput1, +input.transportInput2)} kilogramów CO2</p>
-      <div className='grid grid-cols-3 gap-4 place-items-end h-56 ...'>
-        <Link href="/calculator/home">BACK</Link>
-        <Link href="/calculator/entertainment">NEXT</Link>
-      </div>
-
     </>
   )
 }

@@ -1,11 +1,11 @@
 'use client'
 
 import CustomInput from "@/components/main/CustomInput"
+import NextBackButton from "@/components/main/NextBackButton"
 import { CalculatorContext } from "@/context/CalculatorContext"
-import Link from "next/link"
 import { useContext, useState } from "react"
 const Delivery = () => {
-  const {input, setInput} = useContext(CalculatorContext)
+  const { input, setInput } = useContext(CalculatorContext)
   const [list, setList] = useState<object[]>([])
 
   const addTask = () => {
@@ -16,7 +16,10 @@ const Delivery = () => {
   }
   return (
     <>
-      <h1 className="text-3xl font-bold self-center pb-[10px] border-b-[#29836d] border-b-[2px] w-full">Przesyłki</h1>
+      <div className="flex justify-between pb-[10px] border-b-[#29836d] border-b-[2px] w-full items-center">
+        <h1 className="text-3xl font-bold">Przesyłki</h1>
+        <NextBackButton back="entertainment" />
+      </div>
 
       <CustomInput
         min={0}
@@ -52,12 +55,8 @@ const Delivery = () => {
             </ul>
           ))
         }
-        
-      </div>
-      <div className='grid grid-cols-3 gap-4 place-items-end h-56 ...'>
-        <Link href="/calculator/entertainment">BACK</Link>
-      </div>
 
+      </div>
     </>
   )
 }

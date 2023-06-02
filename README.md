@@ -21,7 +21,7 @@ In this project we used vast amount of modern technologies such as:
 
 ## Additional information
 
-- ### Requirements
+### Requirements
 
 [Node.js](https://nodejs.org/en) and [NPM](https://www.npmjs.com/)
 

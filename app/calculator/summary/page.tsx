@@ -5,7 +5,7 @@ import { useContext } from "react"
 
 const Summary = () => {
 
-    const {input, phoneCO2Emission, gasCO2Emission, homeCO2Emission, all} = useContext(CalculatorContext)
+    const {input, phoneCO2Emission, gasCO2Emission, homeCO2Emission, all, deliverySum} = useContext(CalculatorContext)
 
     const entertaiment = phoneCO2Emission(+input.entertainmentInput1)
     const transport = gasCO2Emission(+input.transportInput1,+input.transportInput2 )
@@ -22,6 +22,8 @@ const Summary = () => {
     <div className="text-[#29836d] p-[40px]">
       <h1 className="text-3xl font-bold self-center pb-[10px] w-full">Podsumawanie</h1>
       <ul>
+        <li>Przesyłki wazyły: {deliverySum.weight} Kg</li>
+        <li>Przesyłki jechaly: {deliverySum.journey} Km</li>
         <li>{home} kilogramów CO2 wyprodukowanych poprzez użytek w gospodarstwie domowym {all ? `(${(home / all * 100) } %)` : ""}</li>
         <li>{transport} kilogramów CO2 wyprodukowanych poprzez transport {all ? `(${(transport / all * 100) } %)` : ""}</li>
         <li>{entertaiment} kilogramów CO2 wyprodukowanych przez rozrwykę {all ? `(${(entertaiment / all * 100) } %)` : ""}</li>

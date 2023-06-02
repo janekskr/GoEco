@@ -17,8 +17,15 @@ interface InputState {
   entertainmentInput1: string;
 }
 
+interface DelievierySumState {
+  weight: number;
+  journey: number;
+}
+
 interface CalculatorContextProps {
   input: InputState;
+  deliverySum: DelievierySumState;
+  setDeliverySum: React.Dispatch<React.SetStateAction<DelievierySumState>>
   setInput: React.Dispatch<React.SetStateAction<InputState>>;
   phoneEnergyConsumption: (energy: number) => number;
   phoneCO2Emission: (consumption: number) => number;
@@ -48,6 +55,10 @@ export const CalculatorProvider = ({ children }: CalculatorContextProviderProps)
     deliveryInput2: "",
     entertainmentInput1: "",
   });
+  const [deliverySum, setDeliverySum] = useState({
+    weight: 0, 
+    journey: 0
+  })
 
   const currentCO2Emission = (input: number) => {
     return input * 0.6571
@@ -96,11 +107,12 @@ export const CalculatorProvider = ({ children }: CalculatorContextProviderProps)
   }
 
   const all = +(gasCO2Emission(+input.transportInput1,+input.transportInput2 ) + homeCO2Emission() + phoneCO2Emission(+input.entertainmentInput1)).toFixed(2)
-
   return (
     <CalculatorContext.Provider
       value={{
         input,
+        deliverySum,
+        setDeliverySum,
         setInput,
         phoneEnergyConsumption,
         phoneCO2Emission,

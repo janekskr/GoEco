@@ -5,13 +5,15 @@ import NextBackButton from "@/components/main/NextBackButton"
 import { CalculatorContext } from "@/context/CalculatorContext"
 import { useContext, useState } from "react"
 const Delivery = () => {
-  const { input, setInput } = useContext(CalculatorContext)
+  const { input, setInput, setDeliverySum } = useContext(CalculatorContext)
   const [list, setList] = useState<object[]>([])
 
   const addTask = () => {
     if (+input.deliveryInput1 && +input.deliveryInput2) {
       const task = { journey: +input.deliveryInput1, weight: +input.deliveryInput2 }
       setList(prev => [...prev, task])
+      setDeliverySum((prev: any) =>({...prev, weight: prev.weight + task.weight, journey: prev.journey + task.journey}))
+      
     }
   }
   return (

@@ -284,7 +284,7 @@ type ActionName = 'planeAction.002'
 
 export default function Model(props: JSX.IntrinsicElements['group']) {
   const group = useRef<THREE.Group>(null)
-  const { nodes, materials, animations } = useGLTF('/world.gltf') as GLTFResult
+  const { nodes, materials, animations } = useGLTF('/3d/world.gltf') as GLTFResult
   // const { actions } = useAnimations<GLTFActions>(animations, group)
   return (
     <group ref={group} {...props} dispose={null} scale={1.5}>

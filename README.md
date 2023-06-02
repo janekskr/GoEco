@@ -1,5 +1,6 @@
 # GoEco
 
+![Alt Website preview](https://github.com/janekskr/GoEco/blob/master/public/preview.png)
 ## Introduction 
 GoEco is a project made for competition [Mini Hackaton](https://nowaakademia.org/mini-hackathon/mini-hackathon-edycja-iii/). Its main purpose is to show the world how bad are climate changes. GoEco allows you to cech your carbon footprint. 
 

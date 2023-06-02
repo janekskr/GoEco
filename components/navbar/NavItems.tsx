@@ -3,18 +3,19 @@ import LinkComponent from './LinkComponent'
 
 interface NavItemsProps {
     className: string;
+    onClick?: () => void
 }
 
-const NavItems = ({className}: NavItemsProps) => {
+const NavItems = ({className, onClick}: NavItemsProps) => {
     return (
         <ul className={className}>
-            <li>
+            <li  onClick={onClick}>
                 <LinkComponent name="Strona Główna" to="/" />
             </li>
-            <li>
+            <li onClick={onClick}>
                 <LinkComponent name="O Nas" to="/about" />
             </li>
-            <li>
+            <li onClick={onClick}>
                 <LinkComponent name="Kalkulator" to="/calculator/home" />
             </li>
         </ul>

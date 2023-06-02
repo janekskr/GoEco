@@ -25,19 +25,19 @@ In this project we used vast amount of modern technologies such as:
 
 [Node.js](https://nodejs.org/en) and [NPM](https://www.npmjs.com/)
 
-- ### Packages Installation
+### Packages Installation
 
 ```shell
 npm i
 ```
 
-- ### Starting the app 
+### Starting the app 
 
 ```shell
 npm run dev
 ```
 
-- ### Cloning the repository
+### Cloning the repository
 
 ```shell
 git clone https://github.com/janekskr/GoEco.git

@@ -1,5 +1,5 @@
 import { Canvas } from '@react-three/fiber';
-import { PerspectiveCamera, PresentationControls, ContactShadows } from '@react-three/drei';
+import { PerspectiveCamera, OrbitControls, ContactShadows } from '@react-three/drei';
 import World from './World'
 
 
@@ -10,16 +10,11 @@ const EarthComponent = () => {
                 <PerspectiveCamera makeDefault fov={70} position={[0, 0, 5]} />
                 <ambientLight color="#aeaeae" intensity={0.5} />
                 <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} shadow-mapSize={[512, 512]} castShadow />
-                <PresentationControls
-                    global
-                    config={{ mass: 2, tension: 500 }}
-                    // snap={{ mass: 4, tension: 1500 }} przez to planeta działa jak sprężyna
-                    rotation={[0, 0, 0]}
-                    polar={[-Math.PI, Math.PI]}
-                    azimuth={[-Math.PI, Math.PI]}
-                    >
+                <OrbitControls
+                    autoRotate
+                    enableZoom={false}
+                />
                     <World />
-                </PresentationControls>
                 <ContactShadows position={[0, -1.4, 0]} opacity={0.35} scale={10} blur={2.5} far={4} />
             </Canvas>
         </div>

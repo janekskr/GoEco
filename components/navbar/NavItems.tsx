@@ -1,5 +1,6 @@
 import React from 'react'
 import LinkComponent from './LinkComponent'
+import GithubButton from './GithubButton';
 
 interface NavItemsProps {
     className: string;
@@ -17,6 +18,9 @@ const NavItems = ({className, onClick}: NavItemsProps) => {
             </li>
             <li onClick={onClick}>
                 <LinkComponent name="Kalkulator" to="/calculator/home" />
+            </li>
+            <li>
+                <GithubButton />
             </li>
         </ul>
     )

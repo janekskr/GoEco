@@ -2,7 +2,7 @@
 
 ![Alt Website preview](https://github.com/janekskr/GoEco/blob/master/public/preview.png)
 ## Introduction 
-GoEco is a project made for competition [Mini Hackaton](https://nowaakademia.org/mini-hackathon/mini-hackathon-edycja-iii/). Its main purpose is to show the world how bad are climate changes. GoEco allows you to check your carbon footprint. You can try it on [goeco.vercel.app](goeco.vercel.app)
+GoEco is a project made for competition [Mini Hackaton](https://nowaakademia.org/mini-hackathon/mini-hackathon-edycja-iii/). Its main purpose is to show the world how bad are climate changes. GoEco allows you to check your carbon footprint. You can try it on [goeco.vercel.app](https://goeco.vercel.app)
 
 ## Contributing 
 We welcome anyone who want to be contributor! Here are some ways you can get started:

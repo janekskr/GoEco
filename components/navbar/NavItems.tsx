@@ -7,19 +7,19 @@ interface NavItemsProps {
     onClick?: () => void
 }
 
-const NavItems = ({className, onClick}: NavItemsProps) => {
+const NavItems = ({ className, onClick }: NavItemsProps) => {
     return (
         <ul className={className}>
-            <li  onClick={onClick}>
+            <li onClick={onClick} className="w-full md:w-auto">
                 <LinkComponent name="Strona Główna" to="/" />
             </li>
-            <li onClick={onClick}>
+            <li onClick={onClick} className="w-full md:w-auto">
                 <LinkComponent name="O Nas" to="/about" />
             </li>
-            <li onClick={onClick}>
+            <li onClick={onClick} className="w-full md:w-auto">
                 <LinkComponent name="Kalkulator" to="/calculator/home" />
             </li>
-            <li>
+            <li className="w-full md:w-auto">
                 <GithubButton />
             </li>
         </ul>

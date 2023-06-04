@@ -4,6 +4,7 @@ import CustomInput from '@/components/main/CustomInput';
 import { useContext } from 'react';
 import { CalculatorContext } from '@/context/CalculatorContext';
 import NextBackButton from '@/components/main/NextBackButton';
+import TitleComponent from '@/components/main/TitleComponent';
 
 const Calculator = () => {
   const {input, setInput, gasConsumption} = useContext(CalculatorContext)
@@ -11,10 +12,10 @@ const Calculator = () => {
 
   return (
     <>
-      <div className="flex justify-between pb-[10px] border-b-[#29836d] border-b-[2px] w-full items-center">
-      <h1 className="text-3xl font-bold">Transport</h1>
-      <NextBackButton back="home" next="entertainment" />
-    </div>
+      <div className="flex flex-col sm:flex-row gap-2 justify-between pb-[10px] border-b-[#29836d] border-b-[2px] w-full items-center">
+        <TitleComponent>Transport</TitleComponent>
+        <NextBackButton back="home" next="entertainment" />
+      </div>
       <CustomInput
         min={min} 
         name="transportInput1" 

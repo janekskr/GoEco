@@ -6,7 +6,7 @@ const Logo = () => {
         <Link
             href="/"
             className="
-            w-[100px] 
+            w-[130px] 
             sm:w-[150px] 
             aspect-[580/102] 
             relative
@@ -17,7 +17,7 @@ const Logo = () => {
                 alt="Logo"
                 fill 
                 priority
-                sizes="(max-width: 768px) 100px,(max-width: 1200px) 150px"
+                sizes="(max-width: 768px) 130px,(max-width: 1200px) 150px"
             />
         </Link>
     )

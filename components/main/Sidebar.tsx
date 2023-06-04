@@ -1,42 +1,17 @@
 "use client"
-import CustomLink from './CustomLink'
-import {usePathname} from 'next/navigation'
-
-const links = [
-  {
-    href: "home",
-    name: "Dom"
-  },
-  {
-    href: "transport",
-    name: "Transport"
-  },
-  {
-    href: "entertainment",
-    name: "Telefony, Komputery itd..."
-  },
-  {
-    href: "delivery",
-    name: "Przesyłki"
-  }
-]
-
+import SidebarItems from './SidebarItems'
+import { useCallback, useState } from 'react'
 const Sidebar = () => {
+  const [isOpen, setIsOpen] = useState<Boolean>(false)
 
-  const pathname = usePathname()
-
+  const toogleOpen = useCallback(() => setIsOpen(value => !value), [])
   return (
-    <ul className='bg-[#bcfdbe] flex flex-col p-[40px] gap-4'>
-      { links.map((item, index: number) => (
-        <li key={index}>
-          <CustomLink href={`/calculator/${item.href}`} name={item.name} active={pathname == `/calculator/${item.href}`} />
-        </li>  
-      )) 
-      }
-      <li className='mt-auto'>
-        <CustomLink href={`/calculator/summary`} name="Prześlij" active={true} />
-      </li>
-    </ul>
+    <>
+      <SidebarItems className="p-[40px] gap-4 hidden md:flex" />
+      {isOpen &&<SidebarItems className='p-[25px] gap-2 flex md:hidden'/>}
+    </>
+
+
   )
 }
 

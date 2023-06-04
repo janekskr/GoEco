@@ -1,5 +1,6 @@
 'use client'
 
+import TitleComponent from "@/components/main/TitleComponent"
 import { CalculatorContext } from "@/context/CalculatorContext"
 import { useContext } from "react"
 
@@ -19,8 +20,8 @@ const Summary = () => {
     }
 
   return (
-    <div className="text-[#29836d] p-[40px]">
-      <h1 className="text-3xl font-bold self-center pb-[10px] w-full">Podsumawanie</h1>
+    <div className="text-[#29836d] p-[40px]"> 
+      <TitleComponent>Podsumowanie</TitleComponent>
       <ul>
         <li>Przesyłki wazyły: {deliverySum.weight} Kg</li>
         <li>Przesyłki jechaly: {deliverySum.journey} Km</li>

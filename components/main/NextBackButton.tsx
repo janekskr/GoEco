@@ -7,6 +7,22 @@ interface NextBackButtonProps {
     next?: string;
 }
 
+const BackLink = ({ back }: {back: string;}) => {
+    return (
+        <Link href={`/calculator/${back}`} className="text-sm font-semibold px-3 sm:px-6 ">
+            Poprzednie
+        </Link>
+    )
+}
+
+const NextLink = ({ next, className }: {next: string; className?: string;}) => {
+    return (
+        <Link href={`/calculator/${next}`} className={`text-sm font-semibold px-3 sm:px-6 border-green-700 flex-1 text-center ${className} `}>
+            Następne
+        </Link>
+    )
+}
+
 const NextBackButton = ({ back, next }: NextBackButtonProps) => {
     return (
         <div
@@ -24,21 +40,13 @@ const NextBackButton = ({ back, next }: NextBackButtonProps) => {
                 {
                     (back && next) ?
                         <>
-                            <Link href={`/calculator/${back}`} className="text-sm font-semibold px-6 ">
-                                Poprzednie
-                            </Link>
-                            <Link href={`/calculator/${next}`} className="text-sm font-semibold px-6 border-l-[1px] border-green-700 flex-1 text-center ">
-                                Następne
-                            </Link>
+                            <BackLink back={back} />
+                            <NextLink next={next} className="border-l-[1px]"/>
                         </> :
                         back ?
-                            <Link href={`/calculator/${back}`} className="text-sm font-semibold px-6 ">
-                                Poprzednie
-                            </Link> :
-                            next && 
-                            <Link href={`/calculator/${next}`} className="text-sm font-semibold px-6 flex-1 text-center ">
-                                Następne
-                            </Link>
+                            <BackLink back={back} /> :
+                            next &&
+                            <NextLink next={next} />
                 }
             </div>
 

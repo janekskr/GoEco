@@ -19,7 +19,7 @@ const NavItems = ({ className, onClick }: NavItemsProps) => {
             <li onClick={onClick} className="w-full md:w-auto">
                 <LinkComponent name="Kalkulator" to="/calculator/home" />
             </li>
-            <li className="w-full md:w-auto">
+            <li>
                 <GithubButton />
             </li>
         </ul>

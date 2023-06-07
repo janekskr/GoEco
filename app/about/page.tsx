@@ -24,22 +24,22 @@ const About = () => {
 
       <ul className="list-disc pl-6 flex flex-col gap-[10px]">
         <li>
-          <a href="https://nextjs.org" target="_blank" className="border-b-[3px] border-white font-semibold hover:opacity-[.7] transition">Next.js</a> and <a href="https://react.dev/" target="_blank" className="border-b-[3px] border-white font-semibold hover:opacity-[.7] transition">React.js</a>
+          <a href="https://nextjs.org" target="_blank" className="border-b-[3px] border-white font-semibold sm:hover:opacity-[.7] transition">Next.js</a> and <a href="https://react.dev/" target="_blank" className="border-b-[3px] border-white font-semibold sm:hover:opacity-[.7] transition">React.js</a>
         </li>
         <li>
-          <a href="https://typescriptlang.org/" target="_blank" className="border-b-[3px] border-white font-semibold hover:opacity-[.7] transition">Typescript</a>
+          <a href="https://typescriptlang.org/" target="_blank" className="border-b-[3px] border-white font-semibold sm:hover:opacity-[.7] transition">Typescript</a>
         </li> 
         <li>
-          <a href="https://tailwindcss.com" target="_blank" className="border-b-[3px] border-white font-semibold hover:opacity-[.7] transition">Tailwind CSS</a>
+          <a href="https://tailwindcss.com" target="_blank" className="border-b-[3px] border-white font-semibold sm:hover:opacity-[.7] transition">Tailwind CSS</a>
         </li>
         <li>
-          <a href="https://docs.pmnd.rs/react-three-fiber/getting-started/introduction" target="_blank" className="border-b-[3px] border-white font-semibold hover:opacity-[.7] transition">React Three Fiber</a> and <a href="https://threejs.org/" target="_blank" className="border-b-[3px] border-white font-semibold hover:opacity-[.7] transition">Three.js</a> 
+          <a href="https://docs.pmnd.rs/react-three-fiber/getting-started/introduction" target="_blank" className="border-b-[3px] border-white font-semibold sm:hover:opacity-[.7] transition">React Three Fiber</a> and <a href="https://threejs.org/" target="_blank" className="border-b-[3px] border-white font-semibold sm:hover:opacity-[.7] transition">Three.js</a> 
         </li>
         <li>
-          <a href="https://postcss.org/" target="_blank" className="border-b-[3px] border-white font-semibold hover:opacity-[.7] transition">Postcss</a>
+          <a href="https://postcss.org/" target="_blank" className="border-b-[3px] border-white font-semibold sm:hover:opacity-[.7] transition">Postcss</a>
         </li>
         <li>
-          <a href="https://eslint.org/" target="_blank" className="border-b-[3px] border-white font-semibold hover:opacity-[.7] transition">ESLint</a>
+          <a href="https://eslint.org/" target="_blank" className="border-b-[3px] border-white font-semibold sm:hover:opacity-[.7] transition">ESLint</a>
         </li>
       </ul>
     </div>

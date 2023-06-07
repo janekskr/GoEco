@@ -26,6 +26,7 @@ const Calculator = () => {
         setInput={setInput} 
         label='Ile godziń używałeś laptopa ?'
         value={input.entertainmentInput1}
+        spanContent=' h'
       />
       <p>Zużyłeś: {phoneEnergyConsumption(+input.entertainmentInput1)} Kwh</p>
       

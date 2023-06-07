@@ -31,10 +31,12 @@ export default function CustomInput({name, label, spanContent, type, setInput, m
   }
 
   return (
-    <div className='flex items-center'>
-        <label htmlFor={name}>{label}</label>
-        <input type={type} id={name} name={name} min={min} max={max} value={isSummary()} onChange={handleChange} className='text-[#36b796] ml-[10px] mr-[5px] p-[5px] outline-none rounded-sm'/>
+    <div className='flex flex-col sm:flex-row sm:gap-0 gap-[10px] items-center w-full'>
+        <label htmlFor={name} className='text-center sm:text-left mr-0 sm:mr-[10px]'>{label}</label>
+        <div>
+        <input type={type} id={name} name={name} min={min} max={max} value={isSummary()} onChange={handleChange} className='text-[#36b796] mr-[5px] p-[5px] outline-none rounded-sm'/>
         <span>{spanContent}</span>
+        </div>
     </div>
   )
 }

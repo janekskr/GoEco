@@ -13,7 +13,6 @@ const Home = () => {
           <Link href="/calculator/home" className="bg-green-800 px-12 py-6 my-6 block rounded-full font-semibold text-2xl sm:text-3xl md:text-4xl hover:shadow-2xl transition">Kalkulator</Link>
         </div>
         <EarthComponent />
-
       </div>
       
     </>

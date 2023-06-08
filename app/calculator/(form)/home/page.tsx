@@ -23,7 +23,7 @@ const Calculator = () => {
           name="EnergyUse"
           type="number"
           setInput={setInput}
-          label='Ile zużywasz prądu ?'
+          label='Ile zużywasz prądu?'
           value={input.EnergyUse}
           spanContent=' kwH'
         />

@@ -1,6 +1,11 @@
 import { Canvas } from '@react-three/fiber';
-import { PerspectiveCamera, OrbitControls, ContactShadows } from '@react-three/drei';
-import World from './World'
+import { PerspectiveCamera, OrbitControls, ContactShadows, useGLTF, Preload } from '@react-three/drei';
+
+const Earth = () => {
+    const earth = useGLTF('/3d/world.gltf')
+
+    return <primitive object={earth.scene} scale={1.5} />   
+}
 
 
 const EarthComponent = () => {
@@ -14,8 +19,9 @@ const EarthComponent = () => {
                     autoRotate
                     enableZoom={false}
                 />
-                    <World />
+                <Earth />
                 <ContactShadows position={[0, -1.4, 0]} opacity={0.35} scale={10} blur={2.5} far={4} />
+                <Preload all />
             </Canvas>
         </div>
     );

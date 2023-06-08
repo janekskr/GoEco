@@ -32,9 +32,9 @@ export default function CustomInput({name, label, spanContent, type, setInput, m
 
   return (
     <div className='flex flex-col sm:flex-row sm:gap-0 gap-[10px] items-center w-full'>
-        <label htmlFor={name} className='text-center sm:text-left mr-0 sm:mr-[10px]'>{label}</label>
+        <label htmlFor={name} className='text-center sm:text-left sm:mr-[10px]'>{label}</label>
         <div>
-        <input type={type} id={name} name={name} min={min} max={max} value={isSummary()} onChange={handleChange} className='text-[#36b796] mr-[5px] p-[5px] outline-none rounded-sm'/>
+        <input type={type} id={name} name={name} min={min} max={max} value={isSummary()} onChange={handleChange} className='text-[#36b796] mr-[5px] p-[5px] outline-none rounded-md'/>
         <span>{spanContent}</span>
         </div>
     </div>

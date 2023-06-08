@@ -11,12 +11,12 @@ const Delivery = () => {
   const [list, setList] = useState<object[]>([])
 
   const addTask = () => {
-    if (+input.deliveryInput1 && +input.deliveryInput2) {
-      const task = { journey: +input.deliveryInput1, weight: +input.deliveryInput2 }
+    if (+input.PackageDistance && +input.PackageWeight) {
+      const task = { journey: +input.PackageDistance, weight: +input.PackageWeight }
       setList(prev => [...prev, task])
       setDeliverySum((prev: any) => ({ ...prev, weight: prev.weight + task.weight, journey: prev.journey + task.journey }))
-      input.deliveryInput1 = ""
-      input.deliveryInput2 = ""
+      input.PackageDistance = ""
+      input.PackageWeight = ""
     }
   }
   return (
@@ -30,20 +30,20 @@ const Delivery = () => {
         <div className="flex gap-[20px] flex-col items-center w-full lg:items-start">
           <CustomInput
             min={0}
-            name="deliveryInput1"
+            name="PackageDistance"
             type="number"
             setInput={setInput}
             label='Długość jaką przebyła przesyłka ?'
-            value={input.deliveryInput1}
+            value={input.PackageDistance}
             spanContent=" km"
           />
           <CustomInput
             min={0}
-            name="deliveryInput2"
+            name="PackageWeight"
             type="number"
             setInput={setInput}
             label='Ile ważyła twoja przesyłka ?'
-            value={input.deliveryInput2}
+            value={input.PackageWeight}
             spanContent=" kg"
           />
           <button onClick={addTask} className="bg-green-700 text-white rounded-lg p-[10px] hover:shadow-2xl">Dodaj Przesyłkę</button>

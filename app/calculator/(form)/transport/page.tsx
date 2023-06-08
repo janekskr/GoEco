@@ -19,25 +19,25 @@ const Calculator = () => {
       <div className="overflow-y-scroll h-[52vh] w-full px-[15px] sm:h-auto scrollbar-thin flex flex-col gap-[25px]">
         <CustomInput
           min={min}
-          name="transportInput1"
+          name="UsedFuel"
           type="number"
           setInput={setInput}
           label='Jakie jest twoje średnie spalanie na 100km ?'
-          value={input.transportInput1}
+          value={input.UsedFuel}
           spanContent=" l / 100km"
         />
 
         <CustomInput
           min={min}
-          name="transportInput2"
+          name="DistanceDriven"
           type="number"
           setInput={setInput}
           label='Ile kilometrów przejechałeś ?'
-          value={input.transportInput2}
+          value={input.DistanceDriven}
           spanContent=" km"
         />
 
-        <p>Spaliłeś: {gasConsumption(+input.transportInput1, +input.transportInput2)} Litrów paliwa</p>
+        {/* <p>Spaliłeś: {gasConsumption(+input.UsedFuel, +input.DistanceDriven)} Litrów paliwa</p> */}
       </div>
     </>
   )

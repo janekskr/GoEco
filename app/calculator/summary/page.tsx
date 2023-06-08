@@ -8,8 +8,8 @@ const Summary = () => {
 
     const {input, phoneCO2Emission, gasCO2Emission, homeCO2Emission, all, deliverySum} = useContext(CalculatorContext)
 
-    const entertaiment = phoneCO2Emission(+input.entertainmentInput1)
-    const transport = gasCO2Emission(+input.transportInput1,+input.transportInput2 )
+    const entertaiment = phoneCO2Emission(+input.LaptopUsage)
+    const transport = gasCO2Emission(+input.UsedFuel,+input.DistanceDriven )
     const home = homeCO2Emission()
     let ecoCheck  
     if (all >= 670){

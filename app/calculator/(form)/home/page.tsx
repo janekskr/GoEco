@@ -20,56 +20,56 @@ const Calculator = () => {
       <div className="overflow-y-scroll h-[52vh] w-full px-[15px] sm:h-auto scrollbar-thin flex flex-col gap-[25px]">
         <CustomInput
           min={min}
-          name="homeInput1"
+          name="EnergyUse"
           type="number"
           setInput={setInput}
           label='Ile zużywasz prądu ?'
-          value={input.homeInput1}
+          value={input.EnergyUse}
           spanContent=' kwH'
         />
         <CustomInput
           min={min}
-          name="homeInput2"
+          name="CoalUse"
           type="number"
           setInput={setInput}
           label='Ile zużywasz węgla?'
-          value={input.homeInput2}
+          value={input.CoalUse}
           spanContent=' kg'
         />
         <CustomInput
           min={min}
-          name="homeInput3"
+          name="WoodUse"
           type="number"
           setInput={setInput}
           label='Ile zużywasz drewna opałowego?'
-          value={input.homeInput3}
+          value={input.WoodUse}
           spanContent=' kg'
         />
         <CustomInput
           min={min}
-          name="homeInput4"
+          name="HotWater"
           type="number"
           setInput={setInput}
           label='Ile zużywasz ciepłej wody?'
-          value={input.homeInput4}
+          value={input.HotWater}
           spanContent=' m3'
         />
         <CustomInput
           min={min}
-          name="homeInput5"
+          name="GasUse"
           type="number"
           setInput={setInput}
           label='Ile zużywasz gazu?'
-          value={input.homeInput5}
+          value={input.GasUse}
           spanContent='kg'
         />
-        <ul>
+        {/* <ul>
           <li>Prąd: {input.homeInput1} kwH</li>
           <li>Węgiel: {input.homeInput2} kg</li>
           <li>Drewno: {input.homeInput3} kg</li>
           <li>Ciepła woda:{input.homeInput4} m3</li>
-          <li>Gaz: {input.homeInput5} kg</li>
-        </ul>
+          <li>Gaz: {input.GasUse} kg</li>
+        </ul> */}
       </div>
     </>
   )

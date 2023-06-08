@@ -5,16 +5,16 @@
 import React, { createContext, useState } from "react";
 
 interface InputState {
-  homeInput1: string;
-  homeInput2: string;
-  homeInput3: string;
-  homeInput4: string;
-  homeInput5: string;
-  transportInput1: string;
-  transportInput2: string;
-  deliveryInput1: string;
-  deliveryInput2: string;
-  entertainmentInput1: string;
+  EnergyUse: string;
+  CoalUse: string;
+  WoodUse: string;
+  HotWater: string;
+  GasUse: string;
+  UsedFuel: string;
+  DistanceDriven: string;
+  PackageDistance: string;
+  PackageWeight: string;
+  LaptopUsage: string;
 }
 
 interface DelievierySumState {
@@ -44,16 +44,16 @@ export const CalculatorContext = createContext<CalculatorContextProps>({} as Cal
 
 export const CalculatorProvider = ({ children }: CalculatorContextProviderProps) => {
   const [input, setInput] = useState<InputState>({
-    homeInput1: "",
-    homeInput2: "",
-    homeInput3: "",
-    homeInput4: "",
-    homeInput5: "",
-    transportInput1: "",
-    transportInput2: "",
-    deliveryInput1: "",
-    deliveryInput2: "",
-    entertainmentInput1: "",
+    EnergyUse: "",
+    CoalUse: "",
+    WoodUse: "",
+    HotWater: "",
+    GasUse: "",
+    UsedFuel: "",
+    DistanceDriven: "",
+    PackageDistance: "",
+    PackageWeight: "",
+    LaptopUsage: "",
   });
   const [deliverySum, setDeliverySum] = useState({
     weight: 0, 
@@ -98,15 +98,15 @@ export const CalculatorProvider = ({ children }: CalculatorContextProviderProps)
 
   const homeCO2Emission = () => {
     return +( 
-      currentCO2Emission(+input.homeInput1) + 
-      coalCO2Emission(+input.homeInput2) + 
-      woodCO2Emission(+input.homeInput3) + 
-      waterCO2Emission(+input.homeInput4) + 
-      methanCO2Emission(+input.homeInput5)
+      currentCO2Emission(+input.EnergyUse) + 
+      coalCO2Emission(+input.CoalUse) + 
+      woodCO2Emission(+input.WoodUse) + 
+      waterCO2Emission(+input.HotWater) + 
+      methanCO2Emission(+input.GasUse)
     ).toFixed(2)
   }
 
-  const all = +(gasCO2Emission(+input.transportInput1,+input.transportInput2 ) + homeCO2Emission() + phoneCO2Emission(+input.entertainmentInput1)).toFixed(2)
+  const all = +(gasCO2Emission(+input.UsedFuel,+input.DistanceDriven ) + homeCO2Emission() + phoneCO2Emission(+input.LaptopUsage)).toFixed(2)
   return (
     <CalculatorContext.Provider
       value={{

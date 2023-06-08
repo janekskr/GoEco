@@ -21,14 +21,14 @@ const Calculator = () => {
       <div className="overflow-y-scroll h-[52vh] w-full px-[15px] sm:h-auto scrollbar-thin flex flex-col gap-[25px]">
         <CustomInput
           min={min}
-          name="entertainmentInput1"
+          name="LaptopUsage"
           type="number"
           setInput={setInput}
           label='Ile godziń używałeś laptopa ?'
-          value={input.entertainmentInput1}
+          value={input.LaptopUsage}
           spanContent=' h'
         />
-        <p>Zużyłeś: {phoneEnergyConsumption(+input.entertainmentInput1)} Kwh</p>
+        {/* <p>Zużyłeś: {phoneEnergyConsumption(+input.LaptopUsage)} Kwh</p> */}
       </div>
     </>
   )

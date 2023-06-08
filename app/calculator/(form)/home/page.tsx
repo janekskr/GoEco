@@ -23,7 +23,7 @@ const Calculator = () => {
           name="homeInput1"
           type="number"
           setInput={setInput}
-          label='Ile zużywasz prądu ?'
+          label='Ile zużywasz prądu?'
           value={input.homeInput1}
           spanContent=' kwH'
         />

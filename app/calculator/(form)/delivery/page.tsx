@@ -19,6 +19,7 @@ const Delivery = () => {
       input.PackageWeight = ""
     }
   }
+
   return (
     <>
       <header className="flex flex-col sm:flex-row gap-2 justify-between pb-[10px] border-b-[#29836d] border-b-[2px] w-full items-center">
@@ -46,6 +47,15 @@ const Delivery = () => {
             value={input.PackageWeight}
             spanContent=" kg"
           />
+          <CustomInput
+          type="number"
+          name="HowMuch"
+          label="Ile takich samych przesyłek?"
+          value={input.HowMuch}
+          min={1}
+          setInput={setInput}
+          />
+
           <button onClick={addTask} className="bg-green-700 text-white rounded-lg p-[10px] hover:shadow-2xl">Dodaj Przesyłkę</button>
 
         </div>
@@ -57,11 +67,12 @@ const Delivery = () => {
           </ul>
           {
             list.map((item: any, index) => (
-              <ul key={index} className="flex items-center justify-between bg-green-500 p-[10px] rounded-[10px] shadow-md text-white">
-                <li className="flex-1 text-center">Przesyłka {index + 1}</li>
-                <li className="flex-1 text-center">{item.journey} km</li>
-                <li className="flex-1 text-center">{item.weight} kg</li>
-              </ul>
+            <div>
+              {test(item, index, input.HowMuch)}
+            
+            </div>
+
+
             ))
           }
         </div>
@@ -69,5 +80,17 @@ const Delivery = () => {
     </>
   )
 }
-
+let test = (item:any, index, amount:number) =>{
+  let list = []
+  for(let i=0; i<amount; i++){
+    list.push(
+    <ul key={index} className="flex items-center justify-between bg-green-500 p-[10px] rounded-[10px] shadow-md text-white">
+    <li className="flex-1 text-center">Przesyłka {index + 1}</li>
+    <li className="flex-1 text-center">{item.journey} km</li>
+    <li className="flex-1 text-center">{item.weight} kg</li>
+  </ul>
+  )
+  }
+  return list
+}
 export default Delivery

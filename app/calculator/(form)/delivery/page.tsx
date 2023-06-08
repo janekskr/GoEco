@@ -68,8 +68,7 @@ const Delivery = () => {
           {
             list.map((item: any, index) => (
             <div>
-              {test(item, index, input.HowMuch)}
-            
+              {packageAmount(item, index, input.HowMuch)}
             </div>
 
 
@@ -80,7 +79,7 @@ const Delivery = () => {
     </>
   )
 }
-let test = (item:any, index, amount:number) =>{
+let packageAmount = (item:any, index, amount:number) =>{
   let list = []
   for(let i=0; i<amount; i++){
     list.push(

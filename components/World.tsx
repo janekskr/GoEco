@@ -5,7 +5,7 @@ Command: npx gltfjsx@6.1.11 world.gltf -t
 
 import * as THREE from 'three'
 import React, { useRef } from 'react'
-import { useGLTF, useAnimations } from '@react-three/drei'
+import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
 type GLTFResult = GLTF & {
@@ -794,4 +794,4 @@ export default function Model(props: JSX.IntrinsicElements['group']) {
   )
 }
 
-useGLTF.preload('/world.gltf')
+useGLTF.preload('/3d/world.gltf')

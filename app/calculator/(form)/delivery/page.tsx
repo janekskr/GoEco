@@ -13,7 +13,7 @@ const Delivery = () => {
   const addTask = () => {
     if (+input.PackageDistance && +input.PackageWeight) {
       const task = { journey: +input.PackageDistance, weight: +input.PackageWeight }
-      setList(prev => [...prev ])
+      setList(prev => [...prev, task ])
       setDeliverySum((prev: any) => ({ ...prev, weight: prev.weight + task.weight, journey: prev.journey + task.journey }))
       input.PackageDistance = ""
       input.PackageWeight = ""
@@ -48,14 +48,14 @@ const Delivery = () => {
             value={input.PackageWeight}
             spanContent=" kg"
           />
-          <CustomInput
-            type="number"
-            name="HowMuch"
-            label="Ile takich samych przesyłek?"
-            value={input.HowMuch}
-            min={1}
-            setInput={setInput}
-          />  
+//          <CustomInput
+//            type="number"
+//            name="HowMuch"
+//           label="Ile takich samych przesyłek?"
+//           value={input.HowMuch}
+//            min={1}
+//            setInput={setInput}
+//          />  
 
           <button onClick={addTask} className="bg-green-700 text-white rounded-lg p-[10px] hover:shadow-2xl">Dodaj Przesyłkę</button>
 

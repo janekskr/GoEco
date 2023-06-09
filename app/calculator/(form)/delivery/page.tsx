@@ -13,10 +13,11 @@ const Delivery = () => {
   const addTask = () => {
     if (+input.PackageDistance && +input.PackageWeight) {
       const task = { journey: +input.PackageDistance, weight: +input.PackageWeight }
-      setList(prev => [...prev, task])
+      setList(prev => [...prev ])
       setDeliverySum((prev: any) => ({ ...prev, weight: prev.weight + task.weight, journey: prev.journey + task.journey }))
       input.PackageDistance = ""
       input.PackageWeight = ""
+      input.HowMuch = "1"  
     }
   }
 
@@ -27,7 +28,7 @@ const Delivery = () => {
         <NextBackButton back="entertainment" />
         <CustomLink href={`/calculator/summary`} name="Prześlij" active={true} className="block md:hidden" />
       </header>
-      <div className="overflow-y-scroll h-[52vh] w-full px-[15px] sm:h-auto scrollbar-thin flex flex-col gap-[25px]"> 
+      <div className="overflow-y-scroll h-[52vh] w-full px-[15px] sm:h-auto scrollbar-thin flex flex-col gap-[25px]">
         <div className="flex gap-[20px] flex-col items-center w-full lg:items-start">
           <CustomInput
             min={0}
@@ -48,13 +49,13 @@ const Delivery = () => {
             spanContent=" kg"
           />
           <CustomInput
-          type="number"
-          name="HowMuch"
-          label="Ile takich samych przesyłek?"
-          value={input.HowMuch}
-          min={1}
-          setInput={setInput}
-          />
+            type="number"
+            name="HowMuch"
+            label="Ile takich samych przesyłek?"
+            value={input.HowMuch}
+            min={1}
+            setInput={setInput}
+          />  
 
           <button onClick={addTask} className="bg-green-700 text-white rounded-lg p-[10px] hover:shadow-2xl">Dodaj Przesyłkę</button>
 
@@ -66,28 +67,26 @@ const Delivery = () => {
             <li className="flex-1 text-center font-bold text-large">Waga</li>
           </ul>
           {
-            list.map((item: any, index: number) => (
-            <div key={index}>
-              {packageAmount(item, index, input.HowMuch)}
-            </div>
+            list.map((item: any, index) => (
+              <ul key={index} className="flex items-center justify-between bg-green-500 p-[10px] rounded-[10px] shadow-md text-white">
+                <li className="flex-1 text-center">Przesyłka {index + 1}</li>
+                <li className="flex-1 text-center">{item.journey} km</li>
+                <li className="flex-1 text-center">{item.weight} kg</li>
+              </ul>
             ))
-          }
+          } 
         </div>
       </div>
     </>
   )
 }
-const packageAmount = (item:any, index: number, amount:string) =>{
-  const list = []
-  for(let i=0; i<+amount; i++){
-    list.push(
-    <ul key={index} className="flex items-center justify-between bg-green-500 p-[10px] rounded-[10px] shadow-md text-white">
-    <li className="flex-1 text-center">Przesyłka {index + 1}</li>
-    <li className="flex-1 text-center">{item.journey} km</li>
-    <li className="flex-1 text-center">{item.weight} kg</li>
-  </ul>
-  )
-  }
-  return list
-}
+// const packageAmount = (item:any, index: number, amount:string) =>{
+//   const list = []
+//   for(let i=0; i<+amount; i++){
+//     list.push(
+
+//   )
+//   }
+//   return list
+// }
 export default Delivery

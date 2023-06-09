@@ -1,7 +1,6 @@
 'use client'
 
 import { usePathname } from 'next/navigation';
-import React, { ChangeEvent, useState } from 'react'
 
 interface CustomInputProps {
     name: string;
@@ -16,7 +15,7 @@ interface CustomInputProps {
 
 export default function CustomInput({name, label, spanContent, type, setInput, min, value, max} : CustomInputProps) {
   
-  function handleChange(event: ChangeEvent<HTMLInputElement>) {
+  function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
     const { name, value } = event.target 
     name && setInput((prevState: any) => ({ ...prevState, [name]: value }));
   }

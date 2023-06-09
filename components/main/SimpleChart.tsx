@@ -1,4 +1,3 @@
-
 interface ChartProps {
     compared: number
     baseline: number

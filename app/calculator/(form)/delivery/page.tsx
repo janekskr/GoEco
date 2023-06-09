@@ -61,17 +61,15 @@ const Delivery = () => {
         </div>
         <div className="grid grid-cols-1 w-full gap-[20px]">
           <ul className="flex items-center justify-between py-[10px] text-green-600 text-center border-b-[2px] border-b-green-700">
-            <li className="flex-1 text-center font-bold text-large decoration-sky-600 ">Nazwa</li>
-            <li className="flex-1 text-center font-bold text-large decoration-sky-600 ">Trasa</li>
-            <li className="flex-1 text-center font-bold text-large decoration-sky-600 ">Waga</li>
+            <li className="flex-1 text-center font-bold text-large">Nazwa</li>
+            <li className="flex-1 text-center font-bold text-large">Trasa</li>
+            <li className="flex-1 text-center font-bold text-large">Waga</li>
           </ul>
           {
-            list.map((item: any, index) => (
-            <div>
+            list.map((item: any, index: number) => (
+            <div key={index}>
               {packageAmount(item, index, input.HowMuch)}
             </div>
-
-
             ))
           }
         </div>
@@ -79,9 +77,9 @@ const Delivery = () => {
     </>
   )
 }
-let packageAmount = (item:any, index, amount:number) =>{
-  let list = []
-  for(let i=0; i<amount; i++){
+const packageAmount = (item:any, index: number, amount:string) =>{
+  const list = []
+  for(let i=0; i<+amount; i++){
     list.push(
     <ul key={index} className="flex items-center justify-between bg-green-500 p-[10px] rounded-[10px] shadow-md text-white">
     <li className="flex-1 text-center">Przesyłka {index + 1}</li>

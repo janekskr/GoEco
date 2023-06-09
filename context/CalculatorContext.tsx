@@ -15,7 +15,7 @@ interface InputState {
   PackageDistance: string;
   PackageWeight: string;
   LaptopUsage: string;
-  HowMuch: number
+  HowMuch: string
 }
 
 interface DelievierySumState {
@@ -54,7 +54,7 @@ export const CalculatorProvider = ({ children }: CalculatorContextProviderProps)
     DistanceDriven: "",
     PackageDistance: "",
     PackageWeight: "",
-    HowMuch: 1,
+    HowMuch: "1",
     LaptopUsage: "",
   });
   const [deliverySum, setDeliverySum] = useState({

@@ -1,6 +1,5 @@
 import { CalculatorProvider } from "@/context/CalculatorContext"
 
-
 export default function CalculatorLayout({
     children,
 }: {

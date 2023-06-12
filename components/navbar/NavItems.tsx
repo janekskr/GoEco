@@ -1,15 +1,17 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 import LinkComponent from './LinkComponent'
 import GithubButton from './GithubButton';
 
 interface NavItemsProps {
-    className: string;
-    onClick?: () => void
+    className?: string;
+    onClick?: () => void;
+    isOpen: boolean;
 }
 
-const NavItems = ({ className, onClick }: NavItemsProps) => {
+const NavItems = ({ className, onClick, isOpen }: NavItemsProps) => {
     return (
-        <ul className={className}>
+        <motion.ul className={className} animate={{x: isOpen ? 0 : '100vw'}}>
             <li onClick={onClick} className="w-full md:w-auto">
                 <LinkComponent name="Strona Główna" to="/" />
             </li>
@@ -22,7 +24,7 @@ const NavItems = ({ className, onClick }: NavItemsProps) => {
             <li>
                 <GithubButton />
             </li>
-        </ul>
+        </motion.ul>
     )
 }
 

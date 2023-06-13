@@ -1,6 +1,7 @@
 import './globals.css'
 import { Lexend } from 'next/font/google'
 import Navbar from '../components/navbar/Navbar'
+import Footer from '@/components/footer/Footer'
 
 const font = Lexend({ subsets: ['latin'] })
 
@@ -22,7 +23,8 @@ export default function RootLayout({
       <body className={font.className}>
         <div className="min-h-screen w-full bg-[url('/img/background.svg')] bg-no-repeat bg-cover text-white">
           <Navbar />
-            {children}
+          {children}
+          <Footer />
         </div>
       </body>
     </html>

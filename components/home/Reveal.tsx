@@ -11,11 +11,11 @@ const Reveal = ({ children }: { children: React.ReactNode; }) => {
     return (
         <div
             ref={ref}
-            className="overflow-hidden">
+            className="overflow-hidden rounded-[40px] shadow-2xl">
             <motion.div
                 animate={isInView && { y: 0, opacity: 1 }}
                 initial={{ y: 250, opacity: 0 }}
-                transition={{ delay: 0.25, duration: .4 }}
+                transition={{ delay: 0.35, duration: .4 }}
             >
                 {children}
             </motion.div>

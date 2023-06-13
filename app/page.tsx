@@ -17,7 +17,7 @@ const Home = () => {
       </div>
       <div className="flex flex-col gap-10 items-center w-[80%] md:w-[65%] mx-auto mt-7"> 
           <Reveal>
-            <div className="p-[40px] rounded-[40px] shadow-2xl bg-green-800">
+            <div className="p-[40px] bg-[#1f6b3c]">
               <h1 className=" text-xl md:text-3xl sm:text-2xl font-bold text-center">
                 Czemu powinno cię to obchodzić zanieczyszczenie powietrza?
               </h1>
@@ -27,7 +27,7 @@ const Home = () => {
             </div>
           </Reveal>
           <Reveal>
-            <div className="p-[40px] rounded-[40px] shadow-2xl bg-green-800">
+            <div className="p-[40px] bg-[#1f6b3c]">
               <h1 className=" text-xl md:text-3xl sm:text-2xl font-bold text-center">
                 Co możesz zrobić, żeby zwalczyć zanieczyszczenie powietrza?
               </h1>

@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
     "@react-three/drei": "^9.70.0",
     "@react-three/fiber": "^8.13.0",
     "@types/node": "20.2.5",
@@ -22,6 +23,7 @@
     "next": "13.4.4",
     "postcss": "8.4.24",
     "react": "18.2.0",
+    "react-awesome-reveal": "^4.2.3",
     "react-dom": "18.2.0",
     "react-icons": "^4.9.0",
     "tailwind-scrollbar": "^3.0.4",

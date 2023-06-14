@@ -13,7 +13,7 @@ const InformationSectionItem = ({title, content}: {title: string; content: strin
                 {
                     showMore ? 
                     content :
-                    content.slice(0, 200)
+                    content.slice(0, 300)
                 }
               </p>
               <button className=" mx-auto mt-[25px] block sm:hidden px-[20px] py-[10px] shadow-md hocer:shadow-2xl bg-green-800 text-lg font-bold rounded-[20px] text-white" onClick={() => setShowMore(prev => !prev)}>

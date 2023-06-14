@@ -3,7 +3,7 @@
 import { useState } from "react"
 
 const InformationSectionItem = ({title, content}: {title: string; content: string}) => {
-    const [showMore, setShowMore] = useState<boolean>(false)
+    const [showMore, setShowMore] = useState<boolean>(window.innerWidth > 640)
   return (
     <div className="p-[40px] bg-[#1f6b3c]">
               <h1 className=" text-xl md:text-3xl sm:text-2xl font-bold text-center">

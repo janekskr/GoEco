@@ -20,8 +20,8 @@ export default function RootLayout({
 }) {  
   return (
     <html lang="en">
-      <body className={`${font.className} overflow-x-hidden w-screen`}>
-        <div className="min-h-screen w-full bg-[url('/img/background.svg')] bg-no-repeat bg-cover text-white">
+      <body className={font.className>
+        <div className="min-h-screen w-screen overflow-x-hidden bg-[url('/img/background.svg')] bg-no-repeat bg-cover text-white">
           <Navbar />
           {children}
           <Footer />

@@ -1,11 +1,9 @@
 'use client'
 
-import CustomInput from "@/components/main/CustomInput"
-import CustomLink from "@/components/main/CustomLink"
-import NextBackButton from "@/components/main/NextBackButton"
-import TitleComponent from "@/components/main/TitleComponent"
+import { CustomInput, CustomLink, Header, NextBackButton, TitleComponent, ScrollContainer } from "@/components/main"
 import { CalculatorContext } from "@/context/CalculatorContext"
 import { useContext, useState } from "react"
+
 const Delivery = () => {
   const { input, setInput, setDeliverySum } = useContext(CalculatorContext)
   const [list, setList] = useState<object[]>([])
@@ -23,12 +21,13 @@ const Delivery = () => {
 
   return (
     <>
-      <header className="flex flex-col sm:flex-row gap-2 justify-between pb-[10px] border-b-[#29836d] border-b-[2px] w-full items-center">
+      <Header>
         <TitleComponent>Przesyłki</TitleComponent>
         <NextBackButton back="entertainment" />
         <CustomLink href={`/calculator/summary`} name="Prześlij" active={true} className="block md:hidden" />
-      </header>
-      <div className="overflow-y-scroll h-[52vh] w-full px-[15px] sm:h-auto scrollbar-thin flex flex-col gap-[25px]">
+      </Header>
+
+      <ScrollContainer>
         <div className="flex gap-[20px] flex-col items-center w-full lg:items-start">
           <CustomInput
             min={0}
@@ -68,7 +67,7 @@ const Delivery = () => {
             ))
           } 
         </div>
-      </div>
+        </ScrollContainer>
     </>
   )
 }

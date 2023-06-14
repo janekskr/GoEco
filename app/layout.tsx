@@ -1,7 +1,7 @@
 import './globals.css'
 import { Lexend } from 'next/font/google'
-import Navbar from '../components/navbar/Navbar'
-import Footer from '@/components/footer/Footer'
+import {Navbar} from '@/components/navbar'
+import {Footer} from '@/components/footer'
 
 const font = Lexend({ subsets: ['latin'] })
 
@@ -19,11 +19,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {  
   return (
-    <html lang="en">
-      <body className={font.className}>
-        <div className="min-h-screen w-screen overflow-x-hidden bg-[url('/img/background.svg')] bg-no-repeat bg-cover text-white">
+    <html lang="pl">
+      <body className={`${font.className} w-screen overflow-x-hidden`}>
+        <div className="min-h-screen relative w-full bg-[url('/img/background.svg')] bg-no-repeat bg-cover text-white">
           <Navbar />
-          {children}
+          <div className="pb-[100px] sm:pb-[150px]">
+            {children}
+          </div>
           <Footer />
         </div>
       </body>

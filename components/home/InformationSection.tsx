@@ -1,13 +1,13 @@
 import { Slide } from "react-awesome-reveal"
-import InformationSectionItem from "./InformationSectionItem"
+import { InformationSectionItem } from "."
 
 const InformationSection = () => {
   return (
-    <div className="flex flex-col gap-10 items-center w-[80%] md:w-[65%] mx-auto mt-7"> 
+    <div className="flex flex-col gap-20 items-center w-[80%] md:w-[65%] mx-auto mt-7"> 
           <Slide className="overflow-hidden rounded-[40px] shadow-2xl" delay={100}>
             <InformationSectionItem 
                 title="Czemu powinno cię to obchodzić zanieczyszczenie powietrza?"
-                content="Wiele osób cierpi z powodu zanieczyszczenia powietrza, nie zdając sobie z tego sprawy. Ty możesz być jedną z nich! Duża część ludzkości nie rozumie powagi tej sytuacji. 7 milionów - taka jest liczba osób, które zmarły PRZEDWCZEŚNIE z powodu zanieczyszczenia powietrza i jego skutków. Jest również bardzo możliwe, że kontaminacja powietrza przyczyniła się do śmierci wielu starszych osób. Objawy wywoływane przez zanieczyszczenie powietrza są często bagatelizowane. To błąd, ponieważ w dłużeszej perspektywie czasu mogą prowadzić do ciękich chorób takich jak: rak płuc, udar, choroby serca, ostre i przewlekłe choroby układu oddechowego. Z tego powodu tak ważne jest więc dbanie o to zby nasze powietrze było czyste. Dbając o czyste powietrze, dbamy o swoje zdrowię"
+                content="Wiele osób cierpi z powodu zanieczyszczenia powietrza, nie zdając sobie z tego sprawy. Ty możesz być jedną z nich! Duża część ludzkości nie rozumie powagi tej sytuacji. 7 milionów - taka jest liczba osób, które zmarły PRZEDWCZEŚNIE z powodu zanieczyszczenia powietrza i jego skutków. Jest również bardzo możliwe, że kontaminacja powietrza przyczyniła się do śmierci wielu starszych osób. Objawy wywoływane przez zanieczyszczenie powietrza są często bagatelizowane. To błąd, ponieważ w dłużeszej perspektywie czasu mogą prowadzić do ciękich chorób takich jak: rak płuc, udar, choroby serca, ostre i przewlekłe choroby układu oddechowego. Z tego powodu tak ważne jest więc dbanie o to zby nasze powietrze było czyste. Dbając o czyste powietrze, dbamy o swoje zdrowie."
             />
           </Slide>
           <Slide className="overflow-hidden rounded-[40px] shadow-2xl" direction="right" delay={100}>

@@ -7,7 +7,7 @@ interface NextBackButtonProps {
 
 const BackLink = ({ back }: {back: string;}) => {
     return (
-        <Link href={`/calculator/${back}`} className="text-sm font-semibold px-3 sm:px-6 ">
+        <Link href={`/calculator/${back}`} className="text-sm font-semibold px-3 sm:px-6 sm:text-lg">
             Poprzednie
         </Link>
     )
@@ -15,7 +15,7 @@ const BackLink = ({ back }: {back: string;}) => {
 
 const NextLink = ({ next, className }: {next: string; className?: string;}) => {
     return (
-        <Link href={`/calculator/${next}`} className={`text-sm font-semibold px-3 sm:px-6 border-green-700 flex-1 text-center ${className} `}>
+        <Link href={`/calculator/${next}`} className={`text-sm font-semibold px-3 sm:px-6 border-green-700 flex-1 text-center sm:text-base lg:text-lg ${className} `}>
             Następne
         </Link>
     )

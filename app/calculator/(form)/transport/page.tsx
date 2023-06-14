@@ -1,22 +1,20 @@
 'use client'
 
-import CustomInput from '@/components/main/CustomInput';
+import { CustomInput, Header, NextBackButton, TitleComponent, ScrollContainer } from "@/components/main"
 import { useContext } from 'react';
 import { CalculatorContext } from '@/context/CalculatorContext';
-import NextBackButton from '@/components/main/NextBackButton';
-import TitleComponent from '@/components/main/TitleComponent';
 
 const Calculator = () => {
-  const { input, setInput, gasConsumption } = useContext(CalculatorContext)
+  const { input, setInput } = useContext(CalculatorContext)
   const min = 0
 
   return (
     <>
-      <header className="flex flex-col sm:flex-row gap-2 justify-between pb-[10px] border-b-[#29836d] border-b-[2px] w-full items-center">
+      <Header>
         <TitleComponent>Transport</TitleComponent>
         <NextBackButton back="home" next="entertainment" />
-      </header>
-      <div className="overflow-y-scroll h-[52vh] w-full px-[15px] sm:h-auto scrollbar-thin flex flex-col gap-[25px]">
+      </Header>
+      <ScrollContainer  >
         <CustomInput
           min={min}
           name="UsedFuel"
@@ -36,9 +34,7 @@ const Calculator = () => {
           value={input.DistanceDriven}
           spanContent=" km"
         />
-
-        {/* <p>Spaliłeś: {gasConsumption(+input.UsedFuel, +input.DistanceDriven)} Litrów paliwa</p> */}
-      </div>
+      </ScrollContainer >
     </>
   )
 }

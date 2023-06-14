@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 //Dane na temat produkcji CO2 zawarte w pliku measurements.txt
 
@@ -32,7 +32,8 @@ interface CalculatorContextProps {
   phoneCO2Emission: (consumption: number) => number;
   gasConsumption: (consumption: number, km: number) => number;
   gasCO2Emission: (consumption: number, km: number) => number;
-  homeCO2Emission: () => number
+  homeCO2Emission: () => number;
+  percentage: (number: number) => string;
   all: number
 }
 
@@ -109,6 +110,13 @@ export const CalculatorProvider = ({ children }: CalculatorContextProviderProps)
   }
 
   const all = +(gasCO2Emission(+input.UsedFuel,+input.DistanceDriven ) + homeCO2Emission() + phoneCO2Emission(+input.LaptopUsage)).toFixed(2)
+  
+  const percentage = (number: number) => {
+    if(!all) return ""
+    
+    return `( ${(number / all * 100).toFixed(2)} % )`
+  }
+
   return (
     <CalculatorContext.Provider
       value={{
@@ -121,7 +129,8 @@ export const CalculatorProvider = ({ children }: CalculatorContextProviderProps)
         gasConsumption,
         gasCO2Emission,
         homeCO2Emission,
-        all
+        all,
+        percentage  
       }}
     >
       {children}

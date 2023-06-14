@@ -1,8 +1,6 @@
-import React from 'react'
-
 const TitleComponent = ({children}: {children: string}) => {
   return (
-    <h1 className='text-2xl sm:text-3xl font-bold text-center'>{children}</h1>
+    <p className='text-2xl xl:text-[35px] font-bold text-center'>{children}</p>
   )
 }
 

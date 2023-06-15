@@ -1,6 +1,6 @@
 'use client'
 
-import { CustomInput, CustomLink, Header, NextBackButton, TitleComponent, ScrollContainer } from "@/components/main"
+import { CustomInput, CustomLink, Header, NextBackButton, TitleComponent, ScrollContainer, SubmitButton } from "@/components/main"
 import { CalculatorContext } from "@/context/CalculatorContext"
 import { useContext, useState } from "react"
 
@@ -24,7 +24,7 @@ const Delivery = () => {
         <TitleComponent>Przesyłki</TitleComponent>
         <div className="flex gap-[10px] sm:gap-[30px] items-center flex-col sm:flex-row">
           <NextBackButton back="entertainment" />
-            <CustomLink href={`/calculator/summary`} name="Prześlij" active={true} className="block lg:hidden" />
+          <SubmitButton className="lg:hidden" />
         </div>
       </Header>
 

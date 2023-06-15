@@ -7,6 +7,7 @@ import Sidebar from "./Sidebar";
 import SimpleChart from "./SimpleChart";
 import TitleComponent from "./TitleComponent";  
 import ScrollContainer from "./ScrollContainer";
+import SubmitButton from "./SubmitButton";
 
 export {
     Header,
@@ -17,5 +18,6 @@ export {
     Sidebar,
     SimpleChart,
     TitleComponent,
-    ScrollContainer
+    ScrollContainer,
+    SubmitButton
 }

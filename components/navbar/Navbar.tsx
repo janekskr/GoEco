@@ -14,7 +14,7 @@ const Navbar = () => {
             <Logo />
             <NavItems className="hidden lg:flex items-center gap-9" isOpen={true}/>
             <RxHamburgerMenu className="block lg:hidden cursor-pointer" size={40} onClick={toggleOpen} />
-            <NavItems onClick={() => setIsOpen(false)} className="flex flex-col lg:hidden z-20 items-center gap-5 absolute md:w-[45vw] sm:w-[55vw] w-[90vw] rounded-3xl right-[5vw] top-[80px] p-[20px] bg-[rgba(0,0,0,.7)] " isOpen={isOpen} />
+            <NavItems onClick={() => setIsOpen(false)} className="flex flex-col lg:hidden z-20 items-center gap-5 absolute md:w-[45vw] sm:w-[55vw] w-[90vw] rounded-3xl right-[5vw] top-[80px] p-[20px] bg-[rgba(0,0,0,.7)] backdrop-blur-sm" isOpen={isOpen} />
         </nav>
     )
 }

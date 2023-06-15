@@ -7,7 +7,7 @@ interface CustomLinkProps {
     className?: string;
 }
 
-const CustomLink = ({name, href, active, className}: CustomLinkProps) => {
+const   CustomLink = ({name, href, active, className}: CustomLinkProps) => {
   return (
     <Link href={href} className={`text-[#36b796] block relative py-[5px] px-[10px] rounded-lg overflow-hidden duration-200 hover:bg-black/5 ${className}`}>
           <span className={ `z-10 relative md:text-lg ${active ? "transition-all duration-300 text-white" : ""}` }>{name}</span>

@@ -1,7 +1,7 @@
 "use client"
 
 import { usePathname } from 'next/navigation'
-import { CustomLink } from '.'
+import { CustomLink, SubmitButton } from '.'
 import { links } from "../../public/assets/Dummy"
 
 const Sidebar = () => {
@@ -17,7 +17,7 @@ const Sidebar = () => {
           ))
           }
           <li className='mt-auto'>
-            <CustomLink href={`/calculator/summary`} name="Prześlij" active={true} />
+            <SubmitButton />
           </li>
         </ul>
   

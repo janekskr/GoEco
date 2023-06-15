@@ -14,7 +14,7 @@ export default function SimpleChart({ compared, baseline }: ChartProps) {
 
     return (
         <div className="w-96">
-            <div className="h-96 flex row justify-around items-end">
+            <div className="h-96 flex row justify-around items-end mx-auto  ">
                 <div className="w-12 bg-white" style={{height: `${first}%`}}></div>
                 <div className="w-12 bg-white" style={{height: `${second}%`}}></div>
             </div>

@@ -7,7 +7,7 @@ interface CircleChartProps {
     entries: Entry[]
 }
 
-export default function CircleChart({ entries }: CircleChartProps) {
+export default function         CircleChart({ entries }: CircleChartProps) {
     const colors = ["#b91c1c", "#4d7c0f", "#0e7490", "#86198f"]
 
     const sum = entries.map((x) => x.value).reduce((a, b) => a + b)
@@ -21,7 +21,7 @@ export default function CircleChart({ entries }: CircleChartProps) {
     return (
         <div>
             <div className="h-96 w-96 rounded-full" style={{background: `conic-gradient(${gradient})`}}></div>
-            <ul className="list-inside flex row justify-evenly">
+            <ul className="list-inside flex row justify-evenly pt-5">
                 {
                     entries.map((entry, index) => 
                     <li 

@@ -13,9 +13,8 @@ const Delivery = () => {
       const task = { journey: +input.PackageDistance, weight: +input.PackageWeight }
       setList(prev => [...prev, task ])
       setDeliverySum((prev: any) => ({ ...prev, weight: prev.weight + task.weight, journey: prev.journey + task.journey }))
-      input.PackageDistance = ""
-      input.PackageWeight = ""
-      input.HowMuch = "1"  
+      input.PackageDistance = 0
+      input.PackageWeight = 0
     }
   }
 
@@ -23,8 +22,10 @@ const Delivery = () => {
     <>
       <Header>
         <TitleComponent>Przesyłki</TitleComponent>
-        <NextBackButton back="entertainment" />
-        <CustomLink href={`/calculator/summary`} name="Prześlij" active={true} className="block md:hidden" />
+        <div className="flex gap-[10px] sm:gap-[30px] items-center flex-col sm:flex-row">
+          <NextBackButton back="entertainment" />
+            <CustomLink href={`/calculator/summary`} name="Prześlij" active={true} className="block lg:hidden" />
+        </div>
       </Header>
 
       <ScrollContainer>

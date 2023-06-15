@@ -5,17 +5,16 @@
 import React, { createContext, useState } from "react";
 
 interface InputState {
-  EnergyUse: string;
-  CoalUse: string;
-  WoodUse: string;
-  HotWater: string;
-  GasUse: string;
-  UsedFuel: string;
-  DistanceDriven: string;
-  PackageDistance: string;
-  PackageWeight: string;
-  LaptopUsage: string;
-  HowMuch: string
+  EnergyUse: number;
+  CoalUse: number;
+  WoodUse: number;
+  HotWater: number;
+  GasUse: number;
+  UsedFuel: number;
+  DistanceDriven: number;
+  PackageDistance: number;
+  PackageWeight: number;
+  LaptopUsage: number;
 }
 
 interface DelievierySumState {
@@ -46,17 +45,16 @@ export const CalculatorContext = createContext<CalculatorContextProps>({} as Cal
 
 export const CalculatorProvider = ({ children }: CalculatorContextProviderProps) => {
   const [input, setInput] = useState<InputState>({
-    EnergyUse: "",
-    CoalUse: "",
-    WoodUse: "",
-    HotWater: "",
-    GasUse: "",
-    UsedFuel: "",
-    DistanceDriven: "",
-    PackageDistance: "",
-    PackageWeight: "",
-    HowMuch: "1",
-    LaptopUsage: "",
+    EnergyUse: 0,
+    CoalUse: 0,
+    WoodUse: 0,
+    HotWater: 0,
+    GasUse: 0,
+    UsedFuel: 0,
+    DistanceDriven: 0,
+    PackageDistance: 0,
+    PackageWeight: 0,
+    LaptopUsage: 0,
   });
   const [deliverySum, setDeliverySum] = useState({
     weight: 0, 

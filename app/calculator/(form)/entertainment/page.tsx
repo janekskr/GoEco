@@ -12,7 +12,7 @@ const Calculator = () => {
   return (
     <>
       <Header>
-        <TitleComponent>Telefony, Komputery, itd...</TitleComponent>
+        <TitleComponent>Rozrywka</TitleComponent>
         <NextBackButton next="delivery" back="transport" />
       </Header>
       <ScrollContainer>

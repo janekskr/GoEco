@@ -13,7 +13,7 @@ const InformationSectionItem = ({title, content}: {title: string; content: strin
                 {
                     showMore ? 
                     content :
-                    content.slice(0, 300)
+                    content.slice(0, 300) + " ..."
                 }
               </p>
               <p className="text-center text-lg mt-5 hidden sm:block">

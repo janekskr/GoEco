@@ -20,7 +20,7 @@ export default function         CircleChart({ entries }: CircleChartProps) {
 
     return (
         <div>
-            <div className="h-96 w-96 rounded-full" style={{background: `conic-gradient(${gradient})`}}></div>
+            <div className="h-72 w-72 sm:h-96 sm:w-96 rounded-full" style={{background: `conic-gradient(${gradient})`}}></div>
             <ul className="list-inside flex row justify-evenly pt-5">
                 {
                     entries.map((entry, index) => 

@@ -6,10 +6,10 @@ GoEco is a project made for competition [Mini Hackaton][mini-hackaton]. Its main
 
 ## Contents
 
-- [Contributing](#-👏-Contributing)
-- [Technologies](#-🖥️-technologies)
-- [Additional information](#-📖-additional-information)
-- [License](#-📄-license)
+- [Contributing](#-contributing)
+- [Technologies](#-technologies)
+- [Additional information](#-additional-information)
+- [License](#-license)
 
 ## 👏 Contributing 
 

@@ -21,6 +21,7 @@ To see all info about contributing go to [CONTRIBUTING.md][contributing]
 GoEco has adopted a Code of Conduct that we expect project participants to adhere to. Please read the [full text][code-of-conduct] so that you can understand what actions will and will not be tolerated.
 
 ## 🖥️ Technologies
+
 In this project we used vast amount of modern technologies such as:
 
 - [Next.js][nextjs] and [React][react]
@@ -59,7 +60,7 @@ GoEco is [MIT][mit] licensed, as found in the [LICENSE][license] file.
 
 
 [mit]: https://opensource.org/license/mit/
-[license]: https://github.com/janekskr/blob/master/LICENSE
+[license]: https://github.com/janekskr/GoEco/blob/master/LICENSE
 [node]: https://nodejs.org/en
 [npm]: https://www.npmjs.com/
 [postcss]: https://postcss.org/
@@ -73,4 +74,4 @@ GoEco is [MIT][mit] licensed, as found in the [LICENSE][license] file.
 [typescript]: https://www.typescriptlang.org/
 [tailwind]: https://tailwindcss.com
 [threejs]: https://threejs.org/
-[code-of-conduct]: https://github.com/janekskr/blob/master/CODE_OF_CONDUCT.md
+[code-of-conduct]: https://github.com/janekskr/GoEco/blob/master/CODE_OF_CONDUCT.md

@@ -64,7 +64,7 @@ GoEco is [MIT][mit] licensed, as found in the [LICENSE][license] file.
 [npm]: https://www.npmjs.com/
 [postcss]: https://postcss.org/
 [react-three-fiber]: https://docs.pmnd.rs/react-three-fiber/getting-started/introduction
-[contributing]: https"//github.com/janekskr/GoEco/blob/master/CONTRIBUTING.md
+[contributing]: https://github.com/janekskr/GoEco/blob/master/CONTRIBUTING.md
 [mini-hackaton]: https://nowaakademia.org/mini-hackathon/mini-hackathon-edycja-iii/
 [image-preview]: https://github.com/janekskr/GoEco/blob/master/public/preview.png
 [goceo-link]: https://goeco.vercel.app

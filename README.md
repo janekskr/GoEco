@@ -7,6 +7,7 @@ GoEco is a project made for competition [Mini Hackaton][mini-hackaton]. Its main
 ## Contents
 
 - [Contributing](#-contributing)
+- [Code of Conduct](#-code-of-conduct)
 - [Technologies](#-technologies)
 - [Additional information](#-additional-information)
 - [License](#-license)
@@ -15,7 +16,7 @@ GoEco is a project made for competition [Mini Hackaton][mini-hackaton]. Its main
 
 To see all info about contributing go to [CONTRIBUTING.md][contributing]
 
-## Code of Conduct          
+## 💖 Code of Conduct          
 
 GoEco has adopted a Code of Conduct that we expect project participants to adhere to. Please read the [full text][code-of-conduct] so that you can understand what actions will and will not be tolerated.
 
